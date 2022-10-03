@@ -89,10 +89,6 @@ The name CNEbroidery is a combanation of 'CN' and 'Ebroidery', Chinese Ebroidery
 
 ### 3. **Testing and Launch**
 
-- PEP8 validation
-
-  - No errors or warnings were found when passing through the official PEP8 validator.
-
 - Errors and Solution
   - ***Error 1***
     - ***Error message***: ERROR: Could not build wheels for backports.zoneinfo, which is required to install pyproject.toml-based projects
