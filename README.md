@@ -1,108 +1,180 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# [**CNEbroidery**](https://https://cnembroidery.herokuapp.com/)
 
-Welcome CrankyCat-Love-Coding,
+![Portfolio image](media/home-page.jpg)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## **Overview**
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+This is an e-commerce web application complete with product search and filter functionality. A live fully functional payment system. A full-featured authentication system including email confirmations and user profiles. And real-time notifications that guide the user's experience. The website was built in modern software development Such as Stripe, Amazon Web Services, Heroku, and more.
 
-## Gitpod Reminders
+## **Table of Contents**
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+- [**CNEbroidery**](#overview)
+  - [**Overview**](#overview)
+  - [**Table of Contents**](#table-of-contents)
+    - [**1. What Is It?**](#1-what-is-it)
+    - [**2. How to Achieve?**](#2-how-to-achieve)
+    - [**3. Testing and Launch**](#3-testing-and-launch)
+    - [**4. Deployment**](#4-deployment)
+    - [**5. Support**](#5-support)
+    - [**6. Reference and Research**](#6-reference-and-research)
 
-`python3 -m http.server`
+### **1. What Is It?**
 
-A blue button should appear to click: _Make Public_,
+- CNEbroidery
+[Details of Ebroidery described on Wiki](https://en.wikipedia.org/wiki/Chinese_embroidery)
 
-Another blue button should appear to click: _Open Browser_.
+The name CNEbroidery is a combanation of 'CN' and 'Ebroidery', Chinese Ebroidery has been popular in China for thousands of years，most of the Chinese embroideries are made of silk. It is commonly made by hand, especially for very sophisticated design. It's considered as one of best gifts or collections. This website is built to introduct Chinese Ebroidery and sell high quality Chinese Ebroidery. 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+[Back to the top](#overview)
 
-A blue button should appear to click: _Make Public_,
+### **2. How to Achieve?**
 
-Another blue button should appear to click: _Open Browser_.
+- **User View**
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+  ![Welcome-page](media/home-page-intro.gif)
 
-To log into the Heroku toolbelt CLI:
+  - Nav bar
+    - ***CNEbroidery***: clicking website name will be redirected back to the home page.
+    - ***My account***: allowing users to login or sign up. This is built by using a popular pre-built package called Django-allauth. It's an open-source and believed to be secure and maintaind up-to-date. It's also easy to add more functionality to it.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+    ![Login](media/login-signup.gif)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+    - ***Products***: users can access product page by clicking 'shop now' button or via nav product link. It contains all links for products and categories. There are three categories which are Decoration, Fashion and Offers.
 
-------
+    ![Products-page](media/product-page.gif)
 
-## Release History
+    - ***Search engine and sorting products***: users are able to search from the entire site or sort by product size from small to big or sort by product price from low to high.
+    - ***Cart (bag model)***: the color of cart icon will change to blue if users have added any items to cart. The total amount of shopping also available there. Clicking 'View Cart' will direct our users to cart detail page.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+  - Footer
+    - ***Subscribe***: users can enter an email to subscribe monthly newsletter to get exclusive offers and discount codes.
+    - ***Facebook Social Link***: Facebook is used to build a community and deepening relationships with customers to encourage interest and customer loyalty.
+    - ***Privacy Policy***: Privacy Policy to display to make sure that business complies with the law.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- My account
+  - ***Sign up***:
+    A confirmation email will be sent to registered email and a page instructing how to complete the registration is displayed. Once the user confirm registered email then personal profile will be created successfully.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+    ![Sign Up](media/sign-up.gif)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+  - ***Profile (UserProfile model)***:
+    User has a personalized user profile. They can edit and save their information via the profile page. User can also check their order history via this page.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+    ![Profile](media/profile.jpg)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+    ![order-history](media/order-history.jpg)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+    - ***Products***: all products page contain product image, product name, product category, product size, product price. Click on 'Details' bottom will be redirected to product detail page which will show description of the product and a bottom to add to cart. 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+    - ***Payment***: Stripe is used to collect payment. Order confirmation email will be sent after user completed payment. User will be able to view order summary at the check-out-success page.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+    ![Order](media/order.gif)
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+- Product management
+  - ***Add a product***:
+  A user who is authenticated super user will be able to add, edit and remove an item. Adding a product can be access though "My Account" then "Product Management".
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+  - ***Edit and remove a product***:
+  Editing and removing option will be display is user is authenticated.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+  ![Edit product](media/edit-product.gif)
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+- **Program flow chart**
 
-------
+    ![Flow Chart](media/CNE-flowchat.jpg)
 
-## FAQ about the uptime script
+[Back to the top](#overview)
 
-**Why have you added this script?**
+### 3. **Testing and Launch**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+- PEP8 validation
 
-**How will this affect me?**
+  - No errors or warnings were found when passing through the official PEP8 validator.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- Errors and Solution
+  - ***Error 1***
+    - ***Error message***: ERROR: Could not build wheels for backports.zoneinfo, which is required to install pyproject.toml-based projects
+    - ***Solution***:
+      - ```Heroku login -i``` (login to Heroku)
+      - ```heroku stack:set heroku-20 -a <app name>```
+      - runtime.txt (root directory, with the content of: python-3.8.14)
+      - save, commit, push, deploy to heroku
+      - [Article](https://devcenter.heroku.com/articles/heroku-20-stack)
+  
+  - ***Error 2***
+    - ***Error message***: TypeError: expected str, bytes or os.PathLike object, not tuple
+    - ***Solution***: ```MEDIA_ROOT = os.path.join(BASE_DIR, 'media')```, media_root was incorrectly set
+    
+  - ***Error 3***
+    - ***Error message***: Class Product has no objects member
+    - ***Solution***:
+      - Fixed by adding ```objects = models.Manager()``` to Product.
+      - That's not an error, it's just a warning from VSC. Django adds that property dynamically to all model classes (it uses a lot of magic under the hood), so the IDE doesn't know about it by looking at the class declaration, so it warns you about a possible error (it's not). objects is in fact a Manager instance that helps with querying the DB. If you really want to get rid of that warning you could go to all your models and add objects = models.Manager() Now, VSC will see the objects declared and will not complain about it again.
+      - [Article](https://stackoverflow.com/questions/45135263/class-has-no-objects-member )
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+  - ***Error 4***
+    - ***Error message***: django.db.migrations.exceptions.NodeNotFoundError: Migration checkout.0005_order_coupon dependencies reference nonexistent parent node ('coupons', '0003_alter_coupon_coupon_code_alter_coupon_discount_price')
+    - ***Solution***:
+      - basicly to solved this error is to completely remove your Django migrations and reset your database.
+      - before doing that it is better to save database by using ```python3 manage.py dumpdata products.product > products_dump.json```,```python3 manage.py dumpdata products.category > categories_dump.json```. this can be skip if fixture is in place. This is how we got them.products is the app name, product is the model, products_dump.json is the name of the file we put the data in
+      - Remove the all migrations files within your project. Go through each of your project apps' migration folders and remove everything inside, except the __init__.py file.
+      - Drop the database. If you're using Heroku Postgres, the command for this is: ```heroku pg:reset DATABASE_URL```, need to login to Heroku ```Heroku login -i``` before doing that
+      - Run the commands ```python3 manage.py makemigrations``` and ```python3 manage.py migrate``` to remake migrations and setup the new database
+      - ```python3 manage.py loaddata categories```, ```python3 manage.py loaddata products``` to load data back
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+- Technology Stack
+  There is a list of tools or method had been used during the period of development:
 
-**So….?**
+  *Building methods*
+  - [x] [Django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
+  - [x] [Django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+  - [x] [Django-countries](https://pypi.org/project/django-countries/)
+  - [x] [pillow](https://pillow.readthedocs.io/en/stable/index.html)
+  - [x] [cloudinary](https://cloudinary.com/)
+  - [x] [Stripe](https://stripe.com/docs/api?lang=python)
+  - [x] [AWS](https://aws.amazon.com/)
+  - [x] [DMB](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+  - [x] [Heroku]( https://dashboard.heroku.com/apps)
+  - [x] [Privacy Policy Generator](https://www.privacypolicygenerator.info/ )
+  - [x] [lucid](https://lucid.app/)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+  **Other**
+  - [x] [Responsive design](http://ami.responsivedesign.is/#)
+  - [x] [Ezgif](https://ezgif.com/)
 
-**Can I opt out?**
+[Back to the top](#overview)
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+### 4. **Deployment**
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+- The site was deployed to [CNEmbroidery]( https://cnembroidery.herokuapp.com/) page. The steps to deploy are as follows:
 
-**Anything more?**
+- In the Heroku page, select ‘Create new app’
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+- Create app name and choose a region
 
----
+- Navigate to the setting tab. Add Python and node.js buildpacks
 
-Happy coding!
+- At the deploy section, connect to Github, search and link to CNEmbroidery repository.
+
+- Scroll down to set up automatic deploys, it enables Heroku to rebuild the app every time push code to Github.
+
+- The live link can be found here [link]( https://cnembroidery.herokuapp.com/)
+
+[Back to the top](#overview)
+
+### 5. **Support**
+
+- Code Institute Tutor Assistance
+
+  [Back to the top](#overview)
+
+### 6. **Reference and Research**
+
+- Reference
+  - [x] [Wiki](https://www.wikipedia.org/)
+  - [x] [Article 1](http://k.sina.com.cn/article_7059102645_p1a4c15bb500100hze9.html?from=cul )
+  - [x] [README Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#uploading-assets)
+
+[Back to the top](#overview)
