@@ -5,70 +5,7 @@
 <!--Main Navigation-->
 <header>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-        <div class="container-fluid">
-            <!-- Navbar brand -->
-            <a class="navbar-brand nav-link text-warning" href="{% url 'mood' %}">
-                <strong>Moody Box</strong>
-            </a>
-
-            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
-                aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarExample01">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" aria-current="page" href="{% url 'mood' %}">Home</a>
-                    </li>
-
-                    <!-- add feelings for today -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" rel="nofollow">
-                            RecordEmo
-                        </a>
-                    </li>
-
-                    <!-- feelings summary -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            EmoBox
-                        </a>
-                    </li>
-                </ul>
-
-                <ul class="navbar-nav d-flex flex-row">
-                    <!-- Icons -->
-                    <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link" href="https://www.youtube.com" rel="nofollow" target="_blank">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </li>
-
-                    <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link" href="https://www.facebook.com" rel="nofollow" target="_blank">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </li>
-
-                    <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link" href="https://twitter.com" rel="nofollow" >
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
-
-                    <li class="nav-item me-3 me-lg-0">
-                        <a class="nav-link" href="https://github.com/CrankyCat-Loves-Coding/how-do-you-do" rel="nofollow" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Navbar -->
+    {% include 'mood/nav.html' %}
 
     <!-- Background image -->
     <div id="intro" class="p-5 text-center bg-image shadow-1-strong">
@@ -86,8 +23,11 @@
                     </h3>
 
                     <p><a href="#" class="link-info">How it works?</a></p>
-                    <a class="btn btn-outline-muted btn-lg m-2 text-black-50" href="#" role="button" rel="nofollow">RecordEmo</a>
-                    <a class="btn btn-outline-muted btn-lg m-2 text-black-50" href="#" role="button">EmoBox</a>
+
+                    
+                        <a class="btn btn-outline-muted btn-lg m-2 text-black-50" href="{% url 'recordemo' %}" role="button" rel="nofollow">RecordEmo</a>
+                        <a class="btn btn-outline-muted btn-lg m-2 text-black-50" href="#" role="button">EmoBox</a>
+                                    
                     
                     <div class="my-4"></div>
                     
@@ -96,16 +36,11 @@
         </div>
     </div>
     <!-- Background image -->
+    
 </header>
 
 <hr class="m-0" />
 
-<!-- footer -->
-<footer class="text-center p-3" class="footer-bg">
-    Build for educational purpose
-    <i class="fab fa-github"></i>
-    <a class="text-info" href="https://github.com/CrankyCat-Loves-Coding/how-do-you-do">Source Code</a>
-</footer>
-<!-- footer -->
+{% include 'mood/footer.html' %}
 
 {% endblock %}

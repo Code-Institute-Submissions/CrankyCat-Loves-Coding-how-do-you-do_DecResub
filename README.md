@@ -1,4 +1,4 @@
-# [**CNEbroidery**](https://https://cnembroidery.herokuapp.com/)
+# [**How Do You Do**](https://hdyd.herokuapp.com/)
 
 ![Portfolio image](media/home-page.jpg)
 
@@ -127,24 +127,16 @@ The name CNEbroidery is a combanation of 'CN' and 'Ebroidery', Chinese Ebroidery
   - [x] [Django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
   - [x] [Django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/)
   - [x] [Django-countries](https://pypi.org/project/django-countries/)
-  - [x] [pillow](https://pillow.readthedocs.io/en/stable/index.html)
-  - [x] [cloudinary](https://cloudinary.com/)
-  - [x] [Stripe](https://stripe.com/docs/api?lang=python)
   - [x] [AWS](https://aws.amazon.com/)
-  - [x] [DMB](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
+  - [x] [DMB](https://mdbootstrap.com/docs/standard/getting-started/installation/)
   - [x] [Heroku]( https://dashboard.heroku.com/apps)
-  - [x] [Privacy Policy Generator](https://www.privacypolicygenerator.info/ )
-  - [x] [lucid](https://lucid.app/)
-
-  **Other**
-  - [x] [Responsive design](http://ami.responsivedesign.is/#)
-  - [x] [Ezgif](https://ezgif.com/)
+  - [x] [pixabay - background image](https://pixabay.com/users/saydung89-18713596/?tab=most-relevant&pagi=3)
 
 [Back to the top](#overview)
 
 ### 4. **Deployment**
 
-- The site was deployed to [CNEmbroidery]( https://cnembroidery.herokuapp.com/) page. The steps to deploy are as follows:
+- The site was deployed to [How do you do(HDYD)]( https://hdyd.herokuapp.com/) page. The steps to deploy are as follows:
 
 - In the Heroku page, select ‘Create new app’
 
@@ -152,11 +144,11 @@ The name CNEbroidery is a combanation of 'CN' and 'Ebroidery', Chinese Ebroidery
 
 - Navigate to the setting tab. Add Python and node.js buildpacks
 
-- At the deploy section, connect to Github, search and link to CNEmbroidery repository.
+- At the deploy section, connect to Github, search and link to HDYD repository.
 
 - Scroll down to set up automatic deploys, it enables Heroku to rebuild the app every time push code to Github.
 
-- The live link can be found here [link]( https://cnembroidery.herokuapp.com/)
+- The live link can be found here [link]( https://hdyd.herokuapp.com/)
 
 [Back to the top](#overview)
 
@@ -170,7 +162,5 @@ The name CNEbroidery is a combanation of 'CN' and 'Ebroidery', Chinese Ebroidery
 
 - Reference
   - [x] [Wiki](https://www.wikipedia.org/)
-  - [x] [Article 1](http://k.sina.com.cn/article_7059102645_p1a4c15bb500100hze9.html?from=cul )
-  - [x] [README Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#uploading-assets)
 
 [Back to the top](#overview)
