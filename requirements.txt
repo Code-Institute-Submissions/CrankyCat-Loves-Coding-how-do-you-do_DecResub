@@ -5,7 +5,9 @@ botocore==1.27.84
 dj-database-url==1.0.0
 Django==4.1.1
 django-allauth==0.51.0
+django-crispy-forms==1.14.0
 django-storages==1.13.1
+django-summernote==0.8.20.0
 gunicorn==20.1.0
 jmespath==1.0.1
 oauthlib==3.2.1

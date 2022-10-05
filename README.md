@@ -161,6 +161,6 @@ The name CNEbroidery is a combanation of 'CN' and 'Ebroidery', Chinese Ebroidery
 ### 6. **Reference and Research**
 
 - Reference
-  - [x] [Wiki](https://www.wikipedia.org/)
+  - [x] [BugBytes](https://www.youtube.com/watch?v=MZwKoi0wu2Q&list=PL-2EBeDYMIbQSGbpvB59DJbf4Ox7hXPSU&ab_channel=BugBytes)
 
 [Back to the top](#overview)

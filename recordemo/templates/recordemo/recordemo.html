@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 {% load static %}
 
 {% block content %}
@@ -8,11 +9,33 @@
     {% include 'mood/nav.html' %}
 
     <!-- Background image -->
-    <div id="intro" class="p-5 text-center bg-image shadow-1-strong">
-        <div class="mask bg-color">
+    <div id="intro" class="p-5 text-center bg-image shadow-1-strong ">
+        <div class="mask bg-color ">
             <div class="d-flex justify-content-center align-items-center h-100">
                 <div class="px-4 bg-light bg-gradient text-black-50">
 
+                    <div class="my-4"></div>
+
+                    <h4 class="border border-light my-4 p-4">
+                        Stuffing Your Feelings in a EmoBox
+                    </h4>
+
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                    </form>
+
+                    <button 
+                        type="button"
+                        class="btn btn-outline-muted btn-lg m-2 text-black-50" 
+                        href="#" 
+                        role="button"
+                    >
+                        Stuffing
+                    </button>
+                                    
+                    
+                    <div class="my-4"></div>
                     
                 </div>
             </div>
