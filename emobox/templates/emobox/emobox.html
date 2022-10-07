@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+<!--Main Navigation-->
+<header>
+
+    {% include 'mood/nav.html' %}
+
+    <!-- Background image -->
+    <div id="intro" class="p-5 text-center bg-image shadow-1-strong ">
+        <div class="mask bg-color ">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="px-4 bg-light bg-gradient text-black-50">
+
+                    <div class="my-4"></div>
+
+                    <h4 class="border border-light my-4 p-4">
+                        Check Your EmoBox
+                    </h4>
+
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                       
+                        {{ emobox_feeling }}
+                       
+                    </form>
+
+                    <button 
+                        type="button"
+                        class="btn btn-outline-muted btn-lg m-2 text-black-50" 
+                        href="#" 
+                        role="button"
+                    >
+                        Stuffing
+                    </button>
+                                    
+                    
+                    <div class="my-4"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Background image -->
+    
+</header>
+
+<hr class="m-0" />
+
+{% include 'mood/footer.html' %}
+
+{% endblock %}

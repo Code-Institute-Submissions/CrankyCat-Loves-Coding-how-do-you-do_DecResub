@@ -20,19 +20,32 @@
                         Stuffing Your Feelings in a EmoBox
                     </h4>
 
-                    <form action="" method="POST">
+                    <form action="{% url 'emobox' %}" method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
-                        {{ form.as_p }}
+
+                        <div class="row">
+                            <div class="col-12">
+                                {{ form.date|as_crispy_field }}
+                            </div>
+                            <div class="col-12">
+                                {{ form.feelings|as_crispy_field }}
+                            </div>
+                            <div class="col-12">
+                                {{ form.details|as_crispy_field }}
+                            </div>
+                        </div>
+
+                        <button 
+                            type="submit"
+                            class="btn btn-outline-muted btn-lg m-2 text-black-50" 
+                            href="#" 
+                            role="button"
+                        >
+                            Stuffing
+                        </button>
                     </form>
 
-                    <button 
-                        type="button"
-                        class="btn btn-outline-muted btn-lg m-2 text-black-50" 
-                        href="#" 
-                        role="button"
-                    >
-                        Stuffing
-                    </button>
+
                                     
                     
                     <div class="my-4"></div>

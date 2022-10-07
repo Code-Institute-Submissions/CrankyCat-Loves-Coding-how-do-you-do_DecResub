@@ -1,7 +1,11 @@
 from django import forms
+from django.forms import ModelForm
 from datetime import datetime
 
-class AddFeelingForm(forms.Form):
+from .models import AddFeeling
+
+
+class AddFeelingForm(forms.ModelForm):
 
     FEELING_TYPES = [
         ('happy', 'Happy'),
@@ -22,3 +26,7 @@ class AddFeelingForm(forms.Form):
     details = forms.CharField(
         widget=forms.Textarea(),
     )
+
+    class Meta:
+        model = AddFeeling
+        fields = ['date', 'feelings', 'details']

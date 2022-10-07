@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'mood',
     'recordemo',
+    'emobox',
 
     # Other
     'storages',
@@ -67,7 +68,7 @@ MIDDLEWARE = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-crankycatlov-howdoyoudo-uk2khh7g4ej.ws-eu67.gitpod.io',
+    'https://8000-crankycatlov-howdoyoudo-uk2khh7g4ej.ws-eu70.gitpod.io',
 ]
 
 EMAIL_HOST = 'localhost'
@@ -204,3 +205,15 @@ if 'USE_AWS' in os.environ:
     # Override static and media URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = 'hdyd@example.com'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')

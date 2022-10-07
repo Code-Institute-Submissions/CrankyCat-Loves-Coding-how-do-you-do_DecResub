@@ -24,4 +24,5 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path('', include('mood.urls')),
     path('recordemo/', include('recordemo.urls')),
+    path('emobox/', include('emobox.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
