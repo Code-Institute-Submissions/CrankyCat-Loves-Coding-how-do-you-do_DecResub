@@ -9,27 +9,17 @@ from django.contrib.auth.decorators import login_required
 @login_required
 def RecordEmo(request):
 
+    form = AddFeelingForm()
+
     if request.method == 'POST':
         form = AddFeelingForm(request.POST)
+
         if form.is_valid():
             form.save()
-            return redirect('emobox/emobox.html')
             form = AddFeelingForm()
-    else:
-        form = AddFeelingForm
-
-    # template = 'recordemo/recordemo.html'
-
-    # if request.method == 'POST':
-    #     form = AddFeelingForm(request.POST)
-    #     print(request.POST)
-    #     if form.is_valid():
-    #         form.save() 
-    #         return redirect('emobox/emobox.html')
-    # form = AddFeelingForm()
 
     context = {
-        'form': AddFeelingForm(),
+        'form': form,
     }
 
     return render(request, 'recordemo/recordemo.html', context)
