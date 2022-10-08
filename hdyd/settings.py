@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'mood',
     'recordemo',
     'emobox',
+    'profiles',
 
     # Other
     'storages',
