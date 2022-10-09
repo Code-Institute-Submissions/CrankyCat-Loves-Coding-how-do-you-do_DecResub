@@ -7,12 +7,11 @@ from django.dispatch import receiver
 # Create your models here.
 class UserProfile(models.Model):
     """a user profile to main personal feelings"""
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    full_name = models.CharField(max_length=50, null=True, blank=False)
-    email = models.EmailField(max_length=254, null=True, blank=False)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
+    name = models.CharField(max_length=50, null=True, blank=False)
 
-    def __str__(self):
-        return self.user.username
+    # def __str__(self):
+    #     return self.user
 
 
 @receiver(post_save, sender=User)

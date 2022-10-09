@@ -2,7 +2,9 @@ from django.contrib import admin
 from .models import AddFeeling
 from django_summernote.admin import SummernoteModelAdmin
 
-# Register your models here.
+
+# this decorator will register both our post model and
+# the post admin class with our admin site
 @admin.register(AddFeeling)
 class AddFeelingAdmin(SummernoteModelAdmin):
     
