@@ -22,19 +22,65 @@
 
                     <form action="" method="POST">
                         {% csrf_token %}
-                       
-                        {{ emobox_feeling }}
-                       
+                        <table class="table align-middle mb-0 bg-white">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Date</th>
+                                    <th>Feeling</th>
+                                    <th>Content</th>
+                                    <th>Actions</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            {% for feeling in feelings %}
+                                {% if feelings %}
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="ms-3">
+                                                    <p class="fw-bold mb-1">{{ feeling.user_profile }}</p>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <p class="text-muted mb-0">{{ feeling.date }}</p>
+                                            </td>
+
+                                            <td>
+                                                <span class="badge badge-success rounded-pill d-inline">{{ feeling.feelings }}</span>
+                                            </td>
+
+                                            <td>{{ feeling.details }}</td>
+
+                                            <td>
+                                                <button type="button" class="btn btn-link btn-sm btn-rounded">
+                                                    Edit
+                                                </button>
+                                            </td>
+
+                                            <td>
+                                                <button type="button" class="btn btn-link btn-sm btn-rounded">
+                                                    Delete
+                                                </button>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+
+                                {% else %}
+                                    <p>This Box is empyt!</p>
+                                {% endif %}
+                            {% endfor %}         
+                        </table>
+                           
                     </form>
 
-                    <button 
-                        type="button"
-                        class="btn btn-outline-muted btn-lg m-2 text-black-50" 
-                        href="#" 
-                        role="button"
-                    >
-                        Stuffing
-                    </button>
+                    <p class="mt-2"></p>
+
+                    <a class="btn btn-outline-muted btn-lg m-2 text-black-50" href="{% url 'mood' %}">Home</a>
                                     
                     
                     <div class="my-4"></div>

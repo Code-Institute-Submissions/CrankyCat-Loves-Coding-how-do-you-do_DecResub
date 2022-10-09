@@ -16,22 +16,22 @@
                 <li class="nav-item active">
                     <a class="nav-link" aria-current="page" href="{% url 'mood' %}">Home</a>
                 </li>
-
-                <!-- add feelings for today -->
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'recordemo' %}" rel="nofollow">
-                        RecordEmo
-                    </a>
-                </li>
-
-                <!-- feelings summary -->
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'emobox' %}">
-                        EmoBox
-                    </a>
-                </li>
-
                 {% if request.user.is_authenticated %}
+                    <!-- add feelings for today -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'recordemo' %}">
+                            RecordEmo
+                        </a>
+                    </li>
+                    
+                    <!-- feelings summary -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'emobox' user.id%}">
+                            EmoBox
+                        </a>
+                    </li>
+
+                
                     <!-- logout -->
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">

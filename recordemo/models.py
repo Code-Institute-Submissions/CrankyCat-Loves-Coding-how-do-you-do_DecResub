@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User
+from profiles.models import UserProfile
 
 
 # Create your models here.
@@ -13,6 +15,12 @@ class AddFeeling(models.Model):
         ('angry', 'Angry'),
     ]
 
+    user_profile = models.ForeignKey(
+        UserProfile,
+        on_delete=models.SET_NULL,
+        null=True, blank=True,
+        related_name='user_feelings'
+    )
     date = models.DateField(null=True)
     feelings = models.CharField(
         choices=FEELING_TYPES,
@@ -23,3 +31,4 @@ class AddFeeling(models.Model):
 
     def __str__(self):
         return self.feelings
+    

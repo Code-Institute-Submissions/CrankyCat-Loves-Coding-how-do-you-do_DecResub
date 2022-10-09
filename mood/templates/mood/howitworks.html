@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+<header>
+
+    {% include 'mood/nav.html' %}
+
+    <div id="intro" class="p-5 text-center bg-image shadow-1-strong ">
+        <div class="mask bg-color ">
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <div class="px-4 bg-light bg-gradient text-black-50 p-4">
+
+                    <div class="my-4"></div>
+
+                    <h4 class="border border-light my-4 ">
+                        How it works
+                    </h4>
+                    <p>
+                        I always wonder how many days do I feel happy and how many days do I feel upset in a month. <br>
+                        So I have a little notebook to track of my emotions. I found it helps me to better manage my feelings. <br>
+                        For example, I try harder calm myself if I find out most of the time I feel up set in a month or week. <br>
+                        This is so true that ' Nobody can make you happy until you're happy with yourself FIRST.' <br>
+                    </p>
+                    <p>
+                        So~ there is how it work. Be honest with yourself and simply record your emotions by clicking  
+                        <strong class="text-info" >RecordEmo</strong>  <br>
+                        and you can track all of your records by clicking 
+                        <strong class="text-info" >EmoBox</strong> 
+                        and that's it! Login and start from today!
+                    </p>
+                    
+                    <div class="my-4"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</header>
+
+<hr class="m-0" />
+
+{% include 'mood/footer.html' %}
+
+{% endblock %}

@@ -9,6 +9,7 @@ from django_summernote.admin import SummernoteModelAdmin
 class AddFeelingAdmin(SummernoteModelAdmin):
     
     list_display = (
+        'user_profile',
         'date',
         'feelings',
         'details',

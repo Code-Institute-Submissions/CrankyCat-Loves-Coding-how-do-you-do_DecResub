@@ -3,5 +3,5 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.EmoBox, name='emobox'),
+    path('<int:user_id>/', views.EmoBox, name='emobox'),
 ]

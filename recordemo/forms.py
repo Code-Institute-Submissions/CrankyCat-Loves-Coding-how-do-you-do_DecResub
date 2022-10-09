@@ -16,6 +16,7 @@ class AddFeelingForm(forms.ModelForm):
         ('angry', 'Angry'),
     ]
 
+    user_profile = forms.CharField()
     date = forms.DateField(
         widget=forms.DateInput(attrs={
             'type': 'date',
@@ -29,4 +30,9 @@ class AddFeelingForm(forms.ModelForm):
 
     class Meta:
         model = AddFeeling
-        fields = ['date', 'feelings', 'details']
+        fields = [
+            'user_profile',
+            'date',
+            'feelings',
+            'details'
+        ]
