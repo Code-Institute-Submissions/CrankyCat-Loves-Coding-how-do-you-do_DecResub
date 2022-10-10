@@ -18,7 +18,7 @@
                         Delete any records
                     </h4>
 
-                    <p class="text-danger">Be cautious! All records will be deleted. </p>
+                    <p class="text-danger">h~~Clean as fresh!</p>
 
                     <form action="{% url 'edit_emobox' user.id %}" method="POST">
                         {% csrf_token %}
@@ -41,7 +41,7 @@
                                             <td>
                                                 <div class="d-flex align-items-center">
                                                     <div class="ms-3">
-                                                    <p class="fw-bold mb-1">{{ feeling.user_profile }}</p>
+                                                    <p class="fw-bold mb-1">{{ profile.name }}</p>
                                                     </div>
                                                 </div>
                                             </td>

@@ -3,12 +3,10 @@
 {% load static %}
 
 {% block content %}
-<!--Main Navigation-->
 <header>
 
     {% include 'mood/nav.html' %}
 
-    <!-- Background image -->
     <div id="intro" class="p-5 text-center bg-image shadow-1-strong ">
         <div class="mask bg-color ">
             <div class="d-flex justify-content-center align-items-center h-100">
@@ -19,6 +17,12 @@
                     <h4 class="border border-light my-4 p-4">
                         Check Your EmoBox
                     </h4>
+
+                    <p class="text-danger">
+                        You not supposed to erase how you feel.<br>
+                        So you must be cautious! <br>
+                        All records will be deleted if you choose the button. 
+                    </p>
 
                     <form action="{% url 'edit_emobox' user.id %}" method="POST">
                         {% csrf_token %}
@@ -39,7 +43,7 @@
                                             <td>
                                                 <div class="d-flex align-items-center">
                                                     <div class="ms-3">
-                                                    <p class="fw-bold mb-1">{{ feeling.user_profile }}</p>
+                                                    <p class="fw-bold mb-1">{{ profile.name }}</p>
                                                     </div>
                                                 </div>
                                             </td>
@@ -83,7 +87,6 @@
             </div>
         </div>
     </div>
-    <!-- Background image -->
     
 </header>
 
