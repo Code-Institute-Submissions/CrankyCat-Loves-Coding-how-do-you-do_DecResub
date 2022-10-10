@@ -4,7 +4,12 @@
 
 ## **Overview**
 
-This is an e-commerce web application complete with product search and filter functionality. A live fully functional payment system. A full-featured authentication system including email confirmations and user profiles. And real-time notifications that guide the user's experience. The website was built in modern software development Such as Stripe, Amazon Web Services, Heroku, and more.
+I always wonder how many days do I feel happy and how many days do I feel upset in a month.
+So I have a little notebook to track of my emotions. I found it helps me to better manage my feelings.
+For example, I most likely to try harder to calm myself down if I find myself upset most of the time.
+This is so true that ' Nobody can make you happy until you're happy with yourself FIRST.'
+So~ there is how it work. Be honest with yourself and simply record your emotions by clicking RecordEmo
+and you can track all of your records by clicking EmoBox and that's it! Login and start from today!
 
 ## **Table of Contents**
 
@@ -20,10 +25,8 @@ This is an e-commerce web application complete with product search and filter fu
 
 ### **1. What Is It?**
 
-- CNEbroidery
-[Details of Ebroidery described on Wiki](https://en.wikipedia.org/wiki/Chinese_embroidery)
-
-The name CNEbroidery is a combanation of 'CN' and 'Ebroidery', Chinese Ebroidery has been popular in China for thousands of years，most of the Chinese embroideries are made of silk. It is commonly made by hand, especially for very sophisticated design. It's considered as one of best gifts or collections. This website is built to introduct Chinese Ebroidery and sell high quality Chinese Ebroidery. 
+- How Do You Do (Moody Box)
+This is a website allows you to record your emotions and hope that eventually will help you become happier everyday.
 
 [Back to the top](#overview)
 
@@ -31,63 +34,27 @@ The name CNEbroidery is a combanation of 'CN' and 'Ebroidery', Chinese Ebroidery
 
 - **User View**
 
-  ![Welcome-page](media/home-page-intro.gif)
+  - This is fairly simple. A home and a logo link will take User back to index. An unauthenticated User has a chance to register or login the website. An authenticated User will be able to add emotions and review records.
+  - At the How it work page, A User will be explained how this website is going to work.
+  - At the RecordEmo page, A User is able to select a date, a feeling and input some contents for record purpose.
+  - At the EmoBox page, A User is able to review all individual's emo, User is able to delete any emo on this page. However, deleting emo is not recommand. So once delete botton is clicked. All records will be cleared.
+  - At the Profile page (on the top right), A User is able to give themselve a display name.
 
-  - Nav bar
-    - ***CNEbroidery***: clicking website name will be redirected back to the home page.
-    - ***My account***: allowing users to login or sign up. This is built by using a popular pre-built package called Django-allauth. It's an open-source and believed to be secure and maintaind up-to-date. It's also easy to add more functionality to it.
+- **Coder View**
 
-    ![Login](media/login-signup.gif)
-
-    - ***Products***: users can access product page by clicking 'shop now' button or via nav product link. It contains all links for products and categories. There are three categories which are Decoration, Fashion and Offers.
-
-    ![Products-page](media/product-page.gif)
-
-    - ***Search engine and sorting products***: users are able to search from the entire site or sort by product size from small to big or sort by product price from low to high.
-    - ***Cart (bag model)***: the color of cart icon will change to blue if users have added any items to cart. The total amount of shopping also available there. Clicking 'View Cart' will direct our users to cart detail page.
-
-  - Footer
-    - ***Subscribe***: users can enter an email to subscribe monthly newsletter to get exclusive offers and discount codes.
-    - ***Facebook Social Link***: Facebook is used to build a community and deepening relationships with customers to encourage interest and customer loyalty.
-    - ***Privacy Policy***: Privacy Policy to display to make sure that business complies with the law.
-
-- My account
-  - ***Sign up***:
-    A confirmation email will be sent to registered email and a page instructing how to complete the registration is displayed. Once the user confirm registered email then personal profile will be created successfully.
-
-    ![Sign Up](media/sign-up.gif)
-
-  - ***Profile (UserProfile model)***:
-    User has a personalized user profile. They can edit and save their information via the profile page. User can also check their order history via this page.
-
-    ![Profile](media/profile.jpg)
-
-    ![order-history](media/order-history.jpg)
-
-
-    - ***Products***: all products page contain product image, product name, product category, product size, product price. Click on 'Details' bottom will be redirected to product detail page which will show description of the product and a bottom to add to cart. 
-
-    - ***Payment***: Stripe is used to collect payment. Order confirmation email will be sent after user completed payment. User will be able to view order summary at the check-out-success page.
-
-    ![Order](media/order.gif)
-
-- Product management
-  - ***Add a product***:
-  A user who is authenticated super user will be able to add, edit and remove an item. Adding a product can be access though "My Account" then "Product Management".
-
-  - ***Edit and remove a product***:
-  Editing and removing option will be display is user is authenticated.
-
-  ![Edit product](media/edit-product.gif)
-
-
-- **Program flow chart**
-
-    ![Flow Chart](media/CNE-flowchat.jpg)
+  - RecordEmo page is built base on CRUD - Creation method. 
+  - EmoBox page and is built base on CRUD - Reading and Delete method.
+  - Profile page and is built base on CRUD - Updating method.
+  - Only an authenticated User is able to create, modify and delete data belong to themselve.
+  - Heroku was used for deployment.
+  - AWS S3 was used for sotring CSS and media.
+  - DMB was used for styling.
 
 [Back to the top](#overview)
 
 ### 3. **Testing and Launch**
+
+- Testing are only done through the website.
 
 - Errors and Solution
   - ***Error 1***
@@ -136,7 +103,7 @@ The name CNEbroidery is a combanation of 'CN' and 'Ebroidery', Chinese Ebroidery
 
 ### 4. **Deployment**
 
-- The site was deployed to [How do you do(HDYD)]( https://hdyd.herokuapp.com/) page. The steps to deploy are as follows:
+- The site was deployed to [How do you do(Moody Box)]( https://hdyd.herokuapp.com/) page. The steps to deploy are as follows:
 
 - In the Heroku page, select ‘Create new app’
 
@@ -155,8 +122,9 @@ The name CNEbroidery is a combanation of 'CN' and 'Ebroidery', Chinese Ebroidery
 ### 5. **Support**
 
 - Code Institute Tutor Assistance
+- [Coder 凯歌响起](https://blog.csdn.net/a13554371686?type=ask)
 
-  [Back to the top](#overview)
+[Back to the top](#overview)
 
 ### 6. **Reference and Research**
 
