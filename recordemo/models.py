@@ -32,3 +32,5 @@ class AddFeeling(models.Model):
     def __str__(self):
         return self.feelings
     
+    def __str__(self):
+        return f"{self.user_profile}"

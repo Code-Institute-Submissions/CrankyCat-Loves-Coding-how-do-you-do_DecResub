@@ -20,7 +20,7 @@
                         Stuffing Your Feelings in a EmoBox
                     </h4>
 
-                    <form action="{% url 'recordemo' user.id %}" method="POST" enctype="multipart/form-data">
+                    <form action="{% url 'recordemo' %}" method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
 
                         <div class="row">

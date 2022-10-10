@@ -35,25 +35,26 @@ from profiles.form import UserProfileForm
 #     return render(request, 'recordemo/recordemo.html', context)
 
 
-@login_required
-def RecordEmo(request,user_id):
+# @login_required
+# def RecordEmo(request, user_id):
     
-    profile = get_object_or_404(UserProfile, user=user_id)
-    # form = AddFeelingForm()
+#     profile = get_object_or_404(UserProfile, user=user_id)
+#     # form = AddFeelingForm()
 
-    if request.method == 'POST':
-        form = AddFeelingForm(request.POST, instance=profile)
+#     if request.method == 'POST':
+#         form = AddFeelingForm(request.POST, instance=profile)
 
-        if form.is_valid():
-            form.save()
-            form = AddFeelingForm()
-    else:
-        form = AddFeelingForm()
-    context = {
-        'form': form,
-    }
+#         if form.is_valid():
+#             form.save()
+#             form = AddFeelingForm()
+#     else:
+#         form = AddFeelingForm()
+    
+#     context = {
+#         'form': form,
+#     }
 
-    return render(request, 'recordemo/recordemo.html', context)
+#     return render(request, 'recordemo/recordemo.html', context)
 
 
 # @login_required
@@ -76,3 +77,47 @@ def RecordEmo(request,user_id):
 #         )
 #         return redirect('emobox')   
 #     return render(request, 'recordemo/recordemo.html', context)
+
+# data passed without userid
+# @login_required
+# def RecordEmo(request):
+
+#     if request.method == 'POST':
+#         form = AddFeelingForm(request.POST)
+
+#         if form.is_valid():
+
+#             form.save()
+           
+#     else:
+#         form = AddFeelingForm()
+
+#     context = {
+#         'profile': profile,
+#         'form': form,
+#     }
+
+#     return render(request, 'recordemo/recordemo.html', context)
+
+
+@login_required
+def RecordEmo(request):
+
+    profile = get_object_or_404(UserProfile, user=request.user)
+    print(profile)
+    
+    if request.method == 'POST':
+        form = AddFeelingForm(request.POST)
+
+        if form.is_valid():
+            form.instance.user_profile = profile
+            form.save()
+            return redirect('recordemo')
+    else:
+        form = AddFeelingForm(instance=profile)
+
+    context = {
+        'form': form,
+    }
+
+    return render(request, 'recordemo/recordemo.html', context)
