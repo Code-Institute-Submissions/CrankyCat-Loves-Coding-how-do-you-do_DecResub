@@ -10,25 +10,25 @@ from profiles.form import UserProfileForm
 
 
 # @login_required
-# # def RecordEmo(request, user_id):
-# def RecordEmo(request):
+# def RecordEmo(request, user_id):
+# # def RecordEmo(request):
 
-#     # profile = get_object_or_404(UserProfile, user=user_id)
-#     # print(profile)
+#     profile = get_object_or_404(UserProfile, user=user_id)
+#     print(profile)
 #     form = AddFeelingForm()
 
 #     if request.method == 'POST':
-#         # form = AddFeelingForm(request.POST, instance=profile)
-#         form = AddFeelingForm(request.POST)
+#         form = AddFeelingForm(request.POST, instance=profile)
+#         # form = AddFeelingForm(request.POST)
 
 #         if form.is_valid():
-#             print(form)
+            
 #             form.save()
-#             # form = AddFeelingForm(instance=profile)
-#             form = AddFeelingForm()
+#             form = AddFeelingForm(instance=profile)
+#             # form = AddFeelingForm()
 
 #     context = {
-#         # 'profile': profile,
+#         'profile': profile,
 #         'form': form,
 #     }
 
@@ -36,19 +36,43 @@ from profiles.form import UserProfileForm
 
 
 @login_required
-def RecordEmo(request):
-
-    form = AddFeelingForm()
+def RecordEmo(request,user_id):
+    
+    profile = get_object_or_404(UserProfile, user=user_id)
+    # form = AddFeelingForm()
 
     if request.method == 'POST':
-        form = AddFeelingForm(request.POST)
+        form = AddFeelingForm(request.POST, instance=profile)
 
         if form.is_valid():
             form.save()
             form = AddFeelingForm()
-
+    else:
+        form = AddFeelingForm()
     context = {
         'form': form,
     }
 
     return render(request, 'recordemo/recordemo.html', context)
+
+
+# @login_required
+# def RecordEmo(request, user_id):
+
+#     profile = get_object_or_404(UserProfile, user=user_id)
+#     print(profile)
+
+#     if request.method == 'POST':
+#         user_profile = user_id
+#         date = request.POST.get('adddate')
+#         feelings = request.POST.get('addfeelings')
+#         details = request.POST.get('addcontents')
+
+#         AddFeeling.objects.create(
+#             user_profile=user_profile,
+#             date=date,
+#             feelings=feelings,
+#             details=details
+#         )
+#         return redirect('emobox')   
+#     return render(request, 'recordemo/recordemo.html', context)

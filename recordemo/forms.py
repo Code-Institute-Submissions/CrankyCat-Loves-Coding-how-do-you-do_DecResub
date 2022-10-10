@@ -16,7 +16,6 @@ class AddFeelingForm(forms.ModelForm):
         ('angry', 'Angry'),
     ]
 
-    user_profile = forms.CharField()
     date = forms.DateField(
         widget=forms.DateInput(attrs={
             'type': 'date',

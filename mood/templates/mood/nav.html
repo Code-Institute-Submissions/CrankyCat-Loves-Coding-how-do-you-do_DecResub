@@ -19,7 +19,7 @@
                 {% if request.user.is_authenticated %}
                     <!-- add feelings for today -->
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'recordemo' %}">
+                        <a class="nav-link" href="{% url 'recordemo' user.id %}">
                             RecordEmo
                         </a>
                     </li>
