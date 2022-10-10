@@ -49,6 +49,7 @@ This is a website allows you to record your emotions and hope that eventually wi
   - Heroku was used for deployment.
   - AWS S3 was used for sotring CSS and media.
   - DMB was used for styling.
+  - Email verification with Google.
 
 [Back to the top](#overview)
 

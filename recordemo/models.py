@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 from profiles.models import UserProfile
 
 
-# Create your models here.
 class AddFeeling(models.Model):
 
     FEELING_TYPES = [
