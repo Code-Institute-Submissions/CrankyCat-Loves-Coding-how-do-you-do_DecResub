@@ -30,7 +30,6 @@
                                     <th>Feeling</th>
                                     <th>Content</th>
                                     <th>Actions</th>
-                                    <th>Actions</th>
                                 </tr>
                             </thead>
                             {% for feeling in feelings %}
@@ -55,14 +54,6 @@
 
                                             <td>{{ feeling.details }}</td>
 
-                                            <td>
-                                                <button 
-                                                    type="submit" 
-                                                    class="btn btn-link btn-sm btn-rounded"
-                                                >
-                                                    Edit
-                                                </button>
-                                            </td>
 
                                             <td>
                                                 <a href="{% url 'delete_emobox' user.id %}" class="btn btn-link btn-sm btn-rounded">

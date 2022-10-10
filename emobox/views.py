@@ -27,6 +27,7 @@ def EmoBox(request, user_id):
     return render(request, 'emobox/emobox.html', context)
 
 
+# not functional yet
 @login_required
 def EditEmoBox(request, user_id):
     profile = get_object_or_404(UserProfile, user=user_id)
