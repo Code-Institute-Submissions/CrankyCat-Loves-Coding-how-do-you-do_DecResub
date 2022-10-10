@@ -3,12 +3,10 @@
 {% load static %}
 
 {% block content %}
-<!--Main Navigation-->
 <header>
 
     {% include 'mood/nav.html' %}
 
-    <!-- Background image -->
     <div id="intro" class="p-5 text-center bg-image shadow-1-strong ">
         <div class="mask bg-color ">
             <div class="d-flex justify-content-center align-items-center h-100">
@@ -17,7 +15,7 @@
                     <div class="my-4"></div>
 
                     <h4 class="border border-light my-4 p-4">
-                        Check Your EmoBox
+                        Delete any records
                     </h4>
 
                     <form action="{% url 'edit_emobox' user.id %}" method="POST">
@@ -34,6 +32,7 @@
                                 </tr>
                             </thead>
                             {% for feeling in feelings %}
+                            
                                 {% if feelings %}
                                     <tbody>
                                         <tr>
@@ -65,9 +64,9 @@
                                             </td>
 
                                             <td>
-                                                <a href="{% url 'delete_emobox' user.id %}" class="btn btn-link btn-sm btn-rounded">
+                                                <button type="button" class="btn btn-link btn-sm btn-rounded">
                                                     Delete
-                                                </a>
+                                                </button>
                                             </td>
 
                                         </tr>
@@ -76,6 +75,7 @@
                                 {% else %}
                                     <p>This Box is empyt!</p>
                                 {% endif %}
+                               
                             {% endfor %}         
                         </table>
                            
@@ -92,7 +92,6 @@
             </div>
         </div>
     </div>
-    <!-- Background image -->
     
 </header>
 

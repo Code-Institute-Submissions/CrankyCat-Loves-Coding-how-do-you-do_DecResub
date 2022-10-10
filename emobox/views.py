@@ -25,3 +25,31 @@ def EmoBox(request, user_id):
     }
 
     return render(request, 'emobox/emobox.html', context)
+
+
+@login_required
+def EditEmoBox(request, user_id):
+    profile = get_object_or_404(UserProfile, user=user_id)
+    feelings = profile.user_feelings.all().first()
+
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, instance=feelings)
+        if form.is_valid():
+            form.save()
+    form = UserProfileForm(instance=feelings)
+
+    context = {
+        'profile': profile,
+        'form': form,
+    }
+
+    return render(request, 'emobox/edit_emobox.html', context)
+
+
+@login_required
+def DeleteEmoBox(request, user_id):
+    profile = get_object_or_404(UserProfile, user=user_id)
+    feelings = profile.user_feelings.all().first()
+    feelings.delete()
+
+    return render(request, 'emobox/delete_emobox.html')
