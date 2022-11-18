@@ -125,15 +125,11 @@ WSGI_APPLICATION = 'hdyd.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
-    'default': dj_database_url.parse('postgres://jlilrbemkxzusy:3a276d6cc7edd5a9e9927662b230707d4a8a7bb17bb14a347c2f7aea2b16c8ae@ec2-54-246-185-161.eu-west-1.compute.amazonaws.com:5432/danq78c5cud7gc')
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
 
 # Password validation
