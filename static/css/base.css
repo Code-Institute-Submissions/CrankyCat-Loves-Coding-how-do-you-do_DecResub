@@ -33,10 +33,6 @@
 }
 
 /* Allauth form formatting */
-
-/* .allauth-form-inner-content label:not([for='id_remember']) {
-    display: none;
-} */
 .allauth-form-inner-content input::placeholder {
     color: #fff;
 }
