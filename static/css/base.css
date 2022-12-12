@@ -31,8 +31,10 @@
 /* background image*/
 .bg-image {
     background-image: url('https://res.cloudinary.com/dqj8itdfg/image/upload/v1664832186/hdyd/home-image-girl-holding-plant_tac1aw.jpg');
+    background-size: cover;
     background-position: center;
-
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 .bg-color {
