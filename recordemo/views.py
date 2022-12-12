@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 
@@ -13,14 +14,17 @@ from profiles.form import UserProfileForm
 def RecordEmo(request):
 
     profile = get_object_or_404(UserProfile, user=request.user)
-    print(profile)
-    
+
     if request.method == 'POST':
         form = AddFeelingForm(request.POST)
 
         if form.is_valid():
             form.instance.user_profile = profile
             form.save()
+            messages.success(
+                request,
+                'Emo added successfully!'
+            )
             return redirect('recordemo')
     else:
         form = AddFeelingForm(instance=profile)
