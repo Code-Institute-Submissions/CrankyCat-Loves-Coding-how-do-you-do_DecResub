@@ -3,62 +3,46 @@
 {% load static %}
 
 {% block content %}
-<header>
+<div class="px-4 bg-light bg-gradient text-black-50">
 
-    {% include 'mood/nav.html' %}
+    <div class="my-4"></div>
 
-    <div id="intro" class="p-5 text-center bg-image shadow-1-strong ">
-        <div class="mask bg-color ">
-            <div class="d-flex justify-content-center align-items-center h-100">
-                <div class="px-4 bg-light bg-gradient text-black-50">
+    <h4 class="border border-light my-4 p-4">
+        Stuffing Your Feelings in a EmoBox
+    </h4>
 
-                    <div class="my-4"></div>
+    <form action="{% url 'recordemo' %}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
 
-                    <h4 class="border border-light my-4 p-4">
-                        Stuffing Your Feelings in a EmoBox
-                    </h4>
-
-                    <form action="{% url 'recordemo' %}" method="POST" enctype="multipart/form-data">
-                        {% csrf_token %}
-
-                        <div class="row">
-                            <div class="col-12 adddate">
-                                {{ form.date|as_crispy_field }}
-                            </div>
-                            <div class="col-12 addfeelings">
-                                {{ form.feelings|as_crispy_field }}
-                            </div>
-                            <div class="col-12 addcontents">
-                                {{ form.details|as_crispy_field }}
-                            </div>
-                        </div>
-
-                        <p class="mt-2"></p>
-
-                        <button 
-                            type="submit"
-                            class="btn btn-outline-muted btn-lg m-2 text-black-50" 
-                            href="#" 
-                            role="button"
-                        >
-                            Stuffing
-                        </button>
-
-                        <a class="btn btn-outline-muted btn-lg m-2 text-black-50" href="{% url 'mood' %}">Home</a>
-
-                    </form>
-
-                    <div class="my-4"></div>
-                    
-                </div>
+        <div class="row">
+            <div class="col-12 adddate">
+                {{ form.date|as_crispy_field }}
+            </div>
+            <div class="col-12 addfeelings">
+                {{ form.feelings|as_crispy_field }}
+            </div>
+            <div class="col-12 addcontents">
+                {{ form.details|as_crispy_field }}
             </div>
         </div>
-    </div>
+
+        <p class="mt-2"></p>
+
+        <button 
+            type="submit"
+            class="btn btn-outline-secondary btn-lg m-2 text-black-50" 
+            href="#" 
+            role="button"
+        >
+            Stuffing
+        </button>
+
+        <a class="btn btn-outline-secondary btn-lg m-2 text-black-50" href="{% url 'mood' %}">Home</a>
+
+    </form>
+
+    <div class="my-4"></div>
     
-</header>
-
-<hr class="m-0" />
-
-{% include 'mood/footer.html' %}
+</div>
 
 {% endblock %}
