@@ -10,6 +10,19 @@
     }
 }
 
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	z-index: 1;
+}
+
+.box {
+	height: 100%;
+}
+
 /* Navbar brank */
 .navbar-brand-margin {
     margin-top: -3px;
@@ -18,6 +31,8 @@
 /* background image*/
 .bg-image {
     background-image: url('https://res.cloudinary.com/dqj8itdfg/image/upload/v1664832186/hdyd/home-image-girl-holding-plant_tac1aw.jpg');
+    background-position: center;
+
 }
 
 .bg-color {
