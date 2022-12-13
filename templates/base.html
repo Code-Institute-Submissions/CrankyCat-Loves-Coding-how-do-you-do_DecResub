@@ -36,7 +36,8 @@
                 rel="stylesheet"
             />
 
-
+            <!-- summernote css -->
+            <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
         {% endblock %}
 
         {% block extra_css %}
@@ -58,6 +59,9 @@
             <!-- Sweet Alert2 -->
             <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+            <!-- summernote js -->
+            <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+
         {% endblock %}
 
         {% block extra_js %}
@@ -72,7 +76,17 @@
         {% if messages %}
             <div class="message-container fixed-top">
                 {% for message in messages %}
-                    {% include 'includes/toasts/toast_success.html' %}
+                    {% with message.level as level %}
+                        {% if level == 40 %}
+                            {% include 'includes/toasts/toast_error.html' %}
+                        {% elif level == 30 %}
+                            {% include 'includes/toasts/toast_warning.html' %}
+                        {% elif level == 25 %}
+                            {% include 'includes/toasts/toast_success.html' %}
+                        {% else %}
+                            {% include 'includes/toasts/toast_info.html' %}
+                        {% endif %}
+                    {% endwith %}
                 {% endfor %}
             </div>
         {% endif %}
@@ -88,8 +102,10 @@
             <div id="intro" class="p-5 text-center bg-image shadow-1-strong">
                 <div class="mask bg-color overlay">
                     <div class="d-flex justify-content-center align-items-center box">
+
                         {% block content %}
                         {% endblock %}
+
                     </div>
                 </div>
             </div>

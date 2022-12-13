@@ -26,6 +26,14 @@ def RecordEmo(request):
                 'Emo added successfully!'
             )
             return redirect('recordemo')
+        else:
+            messages.error(
+                request,
+                (
+                    'Failed to add Emo. '
+                    'Please try later.'
+                )
+            )
     else:
         form = AddFeelingForm(instance=profile)
 
