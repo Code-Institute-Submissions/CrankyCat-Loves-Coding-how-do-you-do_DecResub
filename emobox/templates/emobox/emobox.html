@@ -27,27 +27,27 @@
        
         <tbody>
             
-            <tr>
-                {% if feelings %}
-                    {% for feeling in feelings %}
-                        <td>{{ profile.name }}</td>
-                        <td>{{ feeling.date }}</td>
-                        <td>
-                            <span class="badge badge-info rounded-pill d-inline">{{ feeling.feelings }}</span>
-                        </td>
-                        <td>{{ feeling.details|truncatechars:10|safe }}</td>
-                        <td>
-                            <a href="{% url 'delete_emobox' user.id %}" class="btn btn-link btn-sm btn-rounded text-info">
-                                Details
-                            </a>
-                        </td>
-                    {% endfor %} 
-                {% else %}
-                    <td colspan="5">
-                        Your EmoBox is empty!
+            {% if feelings %}
+                {% for feeling in feelings %}
+                <tr>
+                    <td>{{ profile.name }}</td>
+                    <td>{{ feeling.date }}</td>
+                    <td>
+                        <span class="badge badge-info rounded-pill d-inline">{{ feeling.feelings }}</span>
                     </td>
-                {% endif %}
-            </tr>
+                    <td>{{ feeling.details|truncatechars:10|safe }}</td>
+                    <td>
+                        <a href="{% url 'show_emo' feeling.id %}" class="btn btn-link btn-sm btn-rounded text-info">
+                            Details
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %} 
+            {% else %}
+                <td colspan="5">
+                    Your EmoBox is empty!
+                </td>
+            {% endif %}
             
         </tbody>
             

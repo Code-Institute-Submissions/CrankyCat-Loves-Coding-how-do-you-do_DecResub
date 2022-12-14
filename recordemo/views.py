@@ -12,6 +12,7 @@ from profiles.form import UserProfileForm
 
 @login_required
 def RecordEmo(request):
+    """add emo"""
 
     profile = get_object_or_404(UserProfile, user=request.user)
 

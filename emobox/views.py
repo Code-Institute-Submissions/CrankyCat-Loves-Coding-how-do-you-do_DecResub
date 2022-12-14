@@ -9,6 +9,18 @@ from profiles.models import UserProfile
 from profiles.form import UserProfileForm
 
 
+def show_emo(request, pk):
+    """A view for render single emo details"""
+
+    emo = AddFeeling.objects.get(pk=pk)
+
+    context = {
+        'emo': emo,
+    }
+
+    return render(request, 'emobox/show_emo.html', context)
+
+
 @login_required
 def EmoBox(request, user_id):
     """ Display individual user's feelings. """

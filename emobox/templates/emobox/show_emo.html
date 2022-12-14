@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="card text-center w-50">
+    <div class="card-header">
+      More of your Emo on {{ emo.date }}
+    </div>
+    <div class="card-body">
+      <h5 class="badge badge-info rounded-pill d-inline">{{ emo.feelings }}</h5>
+      <p class="card-text">{{ emo.details|safe }}</p>
+    </div>
+    <div class="card-footer text-muted">
+        <a class="btn btn-outline-secondary m-2 text-black-50" href="{% url 'emobox' user.id %}">EmoBox</a>
+        <a class="btn btn-outline-secondary m-2 text-black-50" href="{% url 'mood' %}">Home</a>
+    </div>
+</div>
+
+
+{% endblock %}
