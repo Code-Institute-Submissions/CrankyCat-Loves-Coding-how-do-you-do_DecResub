@@ -7,23 +7,23 @@
 
     <div class="row col-12 justify-content-center">
         <h4 class="border border-light my-4 p-4">
-            Stuffing Your Feelings in a EmoBox
+            Edit Emo
         </h4>
     </div>
 
 
-    <form action="{% url 'recordemo' %}" method="POST" enctype="multipart/form-data" class="">
+    <form action="{% url 'update_emo' emo.id %}" method="POST" enctype="multipart/form-data" class="">
         {% csrf_token %}
 
         <div class="">
             <div class="adddate">
-                {{ form.date|as_crispy_field }}
+                {{ emo.date|as_crispy_field }}
             </div>
             <div class="addfeelings">
-                {{ form.feelings|as_crispy_field }}
+                {{ emo.feelings|as_crispy_field }}
             </div>
             <div class="text-left text-dark">
-                <textarea id="summernote" name="details"></textarea>
+                <textarea id="summernote" name="details">{{ emo.details|safe }}</textarea>
             </div>
         </div>
 
@@ -34,7 +34,7 @@
                 href="#" 
                 role="button"
             >
-                Stuffing
+                Update
             </button>
 
             <a class="btn btn-outline-secondary btn-lg m-2 text-black-50" href="{% url 'mood' %}">Home</a>

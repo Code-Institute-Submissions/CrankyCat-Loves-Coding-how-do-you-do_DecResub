@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<div class="col-6 table-responsive">
+<div class="col-6 table-responsive-lg">
 
     <div class="table-light my-4 p-4">
         <h4>
@@ -13,7 +13,7 @@
         <a class="btn btn-link btn-rounded text-info" href="{% url 'mood' %}">Home</a>
     </div>
     
-    <table class="table table-hover table-light">
+    <table class="table table-hover table-light table-fixed">
 
         <thead class="thead-light">
             <tr>
@@ -48,10 +48,11 @@
                     Your EmoBox is empty!
                 </td>
             {% endif %}
-            
+
         </tbody>
             
     </table>
+
 </div>
 
 {% endblock %}
