@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block content %}
-<div class="px-4 bg-light bg-gradient text-black-50">
+<div class="px-4 bg-light bg-gradient text-black-50 card w-50">
 
     <div class="my-4"></div>
 
@@ -16,14 +16,14 @@
         action="{% url 'edit_profile' user.id %}"
         method="POST" 
         enctype="multipart/form-data"
-        class="my-4 p-4"
+        class="my-4 p-4 "
     >
         {% csrf_token %}
         
 
-        <table class="table align-middle mb-0 bg-white">
+        <table class="table align-middle mb-0 bg-white ">
             <tbody>
-                <tr>
+                <tr class="card-body">
 
                     <!-- Name -->
                     <th>Name</th>

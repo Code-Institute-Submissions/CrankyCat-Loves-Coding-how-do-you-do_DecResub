@@ -17,10 +17,10 @@
 
         <div class="">
             <div class="adddate">
-                {{ emo.date|as_crispy_field }}
+                {{ form.date|as_crispy_field }}
             </div>
             <div class="addfeelings">
-                {{ emo.feelings|as_crispy_field }}
+                {{ form.feelings|as_crispy_field }}
             </div>
             <div class="text-left text-dark">
                 <textarea id="summernote" name="details">{{ emo.details|safe }}</textarea>

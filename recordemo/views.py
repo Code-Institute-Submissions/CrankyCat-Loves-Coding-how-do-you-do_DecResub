@@ -50,17 +50,19 @@ def update_emo(request, pk):
     """function allows user to edit an emo"""
 
     emo = AddFeeling.objects.get(pk=pk)
-    form = AddFeelingForm(request.POST or None, instance=emo)
+    profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == 'POST':
+        form = AddFeelingForm(request.POST or None, instance=emo)
 
         if form.is_valid():
+            form.instance.user_profile = profile
             form.save()
             messages.success(
                 request,
                 'Emo updated successfully!'
             )
-            return redirect('show_emo')
+            return redirect(reverse('show_emo', args=[emo.id]))
         else:
             messages.error(
                 request,
@@ -70,6 +72,7 @@ def update_emo(request, pk):
                 )
             )
     else:
+        form = AddFeelingForm(instance=emo)
         messages.info(
             request,
             'You are editing an emo'
@@ -80,7 +83,7 @@ def update_emo(request, pk):
         'emo': emo,
     }
 
-    return render(request, 'recordemo/recordemo.html', context)
+    return render(request, 'recordemo/update_emo.html', context)
 
 
 @login_required

@@ -73,7 +73,7 @@ MIDDLEWARE = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-crankycatlov-howdoyoudo-w4u1wxq6qmv.ws-eu78.gitpod.io',
+    'https://8000-crankycatlov-howdoyoudo-w4u1wxq6qmv.ws-eu79.gitpod.io',
 ]
 
 EMAIL_HOST = 'localhost'
