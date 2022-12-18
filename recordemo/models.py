@@ -21,6 +21,7 @@ class AddFeeling(models.Model):
         related_name='user_feelings'
     )
     date = models.DateField(null=True)
+    created_time = models.DateTimeField(auto_now_add=True, null=True)
     feelings = models.CharField(
         choices=FEELING_TYPES,
         null=True,

@@ -49,6 +49,11 @@
     color: #082C15;
 }
 
+/* show_emo title styling */
+.font-pc {
+    font-family: 'Righteous', cursive;
+}
+
 /* Allauth form formatting */
 .allauth-form-inner-content input::placeholder {
     color: #fff;

@@ -19,6 +19,7 @@
             <tr>
                 <th scope="col">Name</th>
                 <th scope="col">Date</th>
+                <th scope="col">Created on</th>
                 <th scope="col">Feeling</th>
                 <th scope="col">Actions</th>
             </tr>
@@ -31,6 +32,7 @@
                 <tr>
                     <td>{{ profile.name }}</td>
                     <td>{{ feeling.date }}</td>
+                    <td>{{ feeling.created_time }}</td>
                     <td>
                         <span class="badge badge-info rounded-pill d-inline">{{ feeling.feelings }}</span>
                     </td>                    

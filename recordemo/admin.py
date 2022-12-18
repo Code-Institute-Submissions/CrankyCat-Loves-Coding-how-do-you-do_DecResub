@@ -11,6 +11,7 @@ class AddFeelingAdmin(SummernoteModelAdmin):
     list_display = (
         'user_profile',
         'date',
+        'created_time',
         'feelings',
         'details',
     )
