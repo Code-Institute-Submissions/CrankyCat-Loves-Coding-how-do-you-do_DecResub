@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<div class="card text-center w-50">
+<div class="card text-center w-75">
     <div class="card-header">
       Created on <strong class="text-info">{{ emo.date }}</strong> 
     </div>
@@ -14,7 +14,7 @@
     </div>
     <div class="card-footer text-muted">
       <a class="btn btn-outline-secondary m-2 text-black-50" href="{% url 'update_emo' emo.id %}">Update Emo</a>
-      <a class="btn btn-outline-secondary m-2 text-black-50" href="{% url 'delete_emo' emo.id %}">Delete Emo</a>
+      <a class="btn btn-outline-secondary m-2 text-black-50 delete" href="{% url 'delete_emo' emo.id %}">Delete Emo</a>
       <a class="btn btn-outline-secondary m-2 text-black-50" href="{% url 'emobox' user.id %}">EmoBox</a>
       <a class="btn btn-outline-secondary m-2 text-black-50" href="{% url 'mood' %}">Home</a>
     </div>
