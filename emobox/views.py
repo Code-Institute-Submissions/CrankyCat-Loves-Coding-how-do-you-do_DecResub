@@ -34,9 +34,11 @@ def show_emo(request, pk):
 
     # emo = AddFeeling.objects.get(pk=pk)
     emo = get_object_or_404(AddFeeling, pk=pk)
+    profile = get_object_or_404(UserProfile, user=request.user)
 
     context = {
         'emo': emo,
+        'profile': profile,
     }
 
     return render(request, 'emobox/show_emo.html', context)

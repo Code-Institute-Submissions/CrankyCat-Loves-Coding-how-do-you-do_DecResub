@@ -5,17 +5,22 @@
 {% block content %}
 
 <div class="card text-center w-75">
+  
     <div class="card-header">
+
       <h3 class="font-pc text-muted">
-        On {{emo.date}}, I felt
+        On {{emo.date}}, <span class="text-warning">{{ profile.name }}</span> felt
         <span class="badge badge-info rounded-pill d-inline text-uppercase">
           {{ emo.feelings }}
         </span>
       </h3>
+
       <p class="text-muted">
         Created on <strong class="text-info">{{ emo.created_time }}</strong> 
       </p>
+
     </div>
+
     <div class="card-body">
 
       <p class="card-text">{{ emo.details|safe }}</p>

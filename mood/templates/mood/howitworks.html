@@ -16,14 +16,31 @@
         For example, I most likely to try harder to calm myself down if I find myself upset most of the time. <br>
         This is so true that ' Nobody can make you happy until you're happy with yourself FIRST.' <br>
     </p>
-    <p>
-        So~ there is how it work. Be honest with yourself and simply record your emotions by clicking  
-        <strong class="text-info" >RecordEmo</strong>  <br>
-        and you can track all of your records by clicking 
-        <strong class="text-info" >EmoBox</strong> 
-        and that's it! Login and start from today!
-    </p>
-    
+    {% if user.is_authenticated %}
+        <p>
+            So~ there is how it work. Be honest with yourself and simply record your emotions by clicking  
+            <strong>
+                <a class="text-info"  href="{% url 'recordemo' %}" role="button" rel="nofollow">RecordEmo</a>
+            </strong>  <br>
+            and you can track all of your records by clicking 
+            <strong>
+                <a class="text-info" href="{% url 'emobox' user.id %}"  role="button">EmoBox</a>
+            </strong> 
+            and that's it! Login and start from today!
+        </p>
+    {% else %}
+        <p>
+            So~ there is how it work. Be honest with yourself and simply record your emotions by clicking  
+            <strong class="text-info">
+                RecordEmo
+            </strong>  <br>
+            and you can track all of your records by clicking 
+            <strong class="text-info">
+                EmoBox
+            </strong> 
+            and that's it! Login and start from today!
+        </p>
+    {% endif %}
     <div class="my-4"></div>
     
 </div>
