@@ -54,7 +54,6 @@ This is a website allows you to record your emotions and hope that eventually wi
     - As an authenticated User, I can edit any records I have
     - As an authenticated User, I can delete any records I like
 
-
 - **User View**
 
   - This is fairly simple. A home and a logo link will take User back to index. An unauthenticated User has a chance to register or login the website. An authenticated User will be able to add emotions and review records.
@@ -65,7 +64,7 @@ This is a website allows you to record your emotions and hope that eventually wi
 
 - **Coder View**
 
-  - RecordEmo page is built base on CRUD - Creation method. 
+  - RecordEmo page is built base on CRUD - Creation method.
   - EmoBox page and is built base on CRUD - Reading and Delete method.
   - Profile page and is built base on CRUD - Updating method.
   - Only an authenticated User is able to create, modify and delete data belong to themselve.
@@ -73,6 +72,9 @@ This is a website allows you to record your emotions and hope that eventually wi
   - AWS S3 was used for sotring CSS and media.
   - DMB was used for styling.
   - Email verification with Google.
+
+- **Design**
+  - [Wireframes can be viewed here](https://github.com/CrankyCat-Loves-Coding/how-do-you-do/blob/main/media/doc/moody-box-wireframe.pdf)
 
 [Back to the top](#overview)
 
@@ -122,7 +124,9 @@ This is a website allows you to record your emotions and hope that eventually wi
   - [x] [DMB](https://mdbootstrap.com/docs/standard/getting-started/installation/)
   - [x] [Heroku]( https://dashboard.heroku.com/apps)
   - [x] [pixabay - background image](https://pixabay.com/users/saydung89-18713596/?tab=most-relevant&pagi=3)
-
+  - [x] [balsamiq](https://balsamiq.com/)
+  - [x] [colormind](http://colormind.io/)
+  
 [Back to the top](#overview)
 
 ### 4. **Deployment**
