@@ -32,6 +32,29 @@ This is a website allows you to record your emotions and hope that eventually wi
 
 ### **2. How to Achieve?**
 
+- **Strategy**
+  - The target audience for 'Moody Box' are:
+    - People who enjoy writing diary
+    - People who like to record their moments
+    - People who try to manage their emotions
+  - These users will be looking for:
+    - A website is simple and easy to use
+    - A private place to write diary
+    - A full record of their feelings
+
+- **User Stories**
+  - Part 1 – An unauthenticated User
+    - As an unauthenticated User, I am explained how to use this website
+    - As an unauthenticated User, I can sign up to use the website
+    - As an unauthenticated User, I can login to my own page
+  - Part 2 - An authenticated User
+    - As an authenticated User, I want my records to be private
+    - As an authenticated User, I can record anything I want
+    - As an authenticated User, I can view all records I have
+    - As an authenticated User, I can edit any records I have
+    - As an authenticated User, I can delete any records I like
+
+
 - **User View**
 
   - This is fairly simple. A home and a logo link will take User back to index. An unauthenticated User has a chance to register or login the website. An authenticated User will be able to add emotions and review records.
