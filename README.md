@@ -64,9 +64,9 @@ This is a website allows you to record your emotions and hope that eventually wi
 
 - **Coder View**
 
-  - RecordEmo page is built base on CRUD - Creation method.
-  - EmoBox page and is built base on CRUD - Reading and Delete method.
-  - Profile page and is built base on CRUD - Updating method.
+  - RecordEmo page is built base on CRUD - Create, Update and Delete method.
+  - EmoBox page and is built base on CRUD - Read and Delete method.
+  - Profile page and is built base on CRUD - Read and Update method.
   - Only an authenticated User is able to create, modify and delete data belong to themselve.
   - Heroku was used for deployment.
   - AWS S3 was used for sotring CSS and media.
@@ -75,6 +75,10 @@ This is a website allows you to record your emotions and hope that eventually wi
 
 - **Design**
   - [Wireframes can be viewed here](https://github.com/CrankyCat-Loves-Coding/how-do-you-do/blob/main/media/doc/moody-box-wireframe.pdf)
+  - Selected colors that represent peace and calm to build the website.
+  ![color image](media/doc/color.jpg)
+  - Selected Google Font Righteous
+  ![font](media/doc/font-righteous.jpg)
 
 [Back to the top](#overview)
 
@@ -126,7 +130,7 @@ This is a website allows you to record your emotions and hope that eventually wi
   - [x] [pixabay - background image](https://pixabay.com/users/saydung89-18713596/?tab=most-relevant&pagi=3)
   - [x] [balsamiq](https://balsamiq.com/)
   - [x] [colormind](http://colormind.io/)
-  
+
 [Back to the top](#overview)
 
 ### 4. **Deployment**

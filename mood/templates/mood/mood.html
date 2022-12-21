@@ -3,24 +3,25 @@
 
 {% block content %}
 
-<div class="px-4 bg-light bg-gradient text-black-50">
+<div class="px-4 bg-light bg-gradient text-black-50 card">
             
-    <div class="my-4"></div>
+    <div class="card-body">
+        <p class="card-text">Nobody can make you happy until you're happy with yourself <strong>FIRST.</strong></p>
 
-    <h5 class="mb-3">Nobody can make you happy until you're happy with yourself <strong>FIRST.</strong></h5>
-
-    <h3 class="border border-light my-4 p-4">
-        Are you ready to own a Moody Box?
-    </h3>
-
-    <p><a href="{% url 'howitworks' %}" class="link-info">How it works?</a></p>
-
-    {% if request.user.is_authenticated %}
-        <a class="btn btn-outline-secondary btn-lg m-2 text-black-50" href="{% url 'recordemo' %}" role="button" rel="nofollow">RecordEmo</a>
-        <a class="btn btn-outline-secondary btn-lg m-2 text-black-50" href="{% url 'emobox' user.id %}"  role="button">EmoBox</a>
-    {% endif %}            
+        <h3 class="card-title border border-light my-4 p-4">
+            Are you ready to own a Moody Box?
+        </h3>
+        
+        <p>
+            <a href="{% url 'howitworks' %}" class="link-info card-link text-info">How it works?</a>
+        </p>
+        
     
-    <div class="my-4"></div>
+        {% if request.user.is_authenticated %}
+            <a class="btn btn-outline-secondary m-2 text-black-50 card-link" href="{% url 'recordemo' %}" role="button" rel="nofollow">RecordEmo</a>
+            <a class="btn btn-outline-secondary m-2 text-black-50" href="{% url 'emobox' user.id %}"  role="button">EmoBox</a>
+        {% endif %}  
+    </div>
     
 </div>
 
