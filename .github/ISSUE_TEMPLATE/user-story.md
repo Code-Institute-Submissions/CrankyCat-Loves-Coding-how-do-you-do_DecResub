@@ -7,7 +7,7 @@ assignees: CrankyCat-Loves-Coding
 
 ---
 
-As a **User** I can **capability** so that **received benefit**
+As an **Unauthenticated User** I can **capability** so that **received benefit**
 
 Acceptance Criteria:
 - [ ] Acceptance Criteria 1:
