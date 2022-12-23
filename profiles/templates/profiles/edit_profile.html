@@ -2,9 +2,7 @@
 {% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
-<div class="px-4 bg-light bg-gradient text-black-50">
-
-    <div class="my-4"></div>
+<div class="px-4 bg-light bg-gradient text-black-50 text-center card-body">
 
     <form 
         action="{% url 'edit_profile' user.id %}"
@@ -34,10 +32,7 @@
         <a class="btn btn-outline-secondary m-2 text-black-50" href="{% url 'mood' %}">Home</a>
 
     </form>
-                    
-    
-    <div class="my-4"></div>
-    
+                        
 </div>
 
 {% endblock %}

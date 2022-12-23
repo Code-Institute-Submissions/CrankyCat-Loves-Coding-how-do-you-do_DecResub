@@ -9,7 +9,7 @@
   <div class="card-header text-center">
 
     <h3 class="font-pc text-muted card-title">
-      On {{emo.date}}, <span class="text-warning">{{ profile.name }}</span> felt
+      On {{emo.date}}, <span class="text-warning">{{ profile.name|truncatechars:6 }}</span> felt
       <span class="badge badge-info rounded-pill d-inline text-uppercase">
         {{ emo.feelings }}
       </span>

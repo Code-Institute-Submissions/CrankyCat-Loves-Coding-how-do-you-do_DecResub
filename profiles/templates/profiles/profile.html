@@ -3,9 +3,7 @@
 {% load static %}
 
 {% block content %}
-<div class="px-4 bg-light bg-gradient text-black-50 card w-50">
-
-    <div class="my-4"></div>
+<div class="px-4 bg-light bg-gradient text-black-50 text-center card-body">
 
     <h4 class="border border-light my-4 p-4">
         <span class="text-warning">{{ profile.name }}</span> 
@@ -28,7 +26,7 @@
                     <!-- Name -->
                     <th>Name</th>
                     <td>
-                        <p class="fw-normal mb-1">{{ profile.name }}</p>
+                        <p class="fw-normal mb-1">{{ profile.name|truncatechars:6 }}</p>
                     </td>
 
                     <!-- Action -->
@@ -44,9 +42,6 @@
         </table>
 
     </form>
-                    
-    
-    <div class="my-4"></div>
     
 </div>
 
