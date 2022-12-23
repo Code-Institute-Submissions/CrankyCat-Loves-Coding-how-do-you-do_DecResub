@@ -1,18 +1,14 @@
-/* Default height for small devices */
-#intro {
-    height: 100vh;
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
-.overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	z-index: 1;
-}
+/* Default height for small devices */
 
 .box {
-	height: 100%;
+	height: 400px;
+    width: auto;
 }
 
 /* Navbar brank */
@@ -30,6 +26,7 @@
 }
 
 .bg-color {
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -75,13 +72,3 @@
 .modal {
     top: auto!important;
 }
-
-/* media queries */
-/* @media (min-width: 330px) {
-    .overlay {
-        width: 100%;
-        top: 0;
-        left: 0;
-        z-index: 1;
-    }
-} */

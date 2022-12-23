@@ -32,7 +32,6 @@ def emo_box(request, id):
 def show_emo(request, pk):
     """A view for render single emo details"""
 
-    # emo = AddFeeling.objects.get(pk=pk)
     emo = get_object_or_404(AddFeeling, pk=pk)
     profile = get_object_or_404(UserProfile, user=request.user)
 

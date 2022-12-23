@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block content %}
-<div class="px-4 bg-light bg-gradient text-black-50 card">
+<div class="px-4 bg-light bg-gradient text-black-50 text-center">
 
     <div class="row col-12 justify-content-center">
         <h4 class="border border-light my-4 p-4">
@@ -15,14 +15,14 @@
     <form action="{% url 'recordemo' %}" method="POST" enctype="multipart/form-data" class="">
         {% csrf_token %}
 
-        <div class="">
+        <div class="overflow-auto">
             <div class="adddate">
                 {{ form.date|as_crispy_field }}
             </div>
             <div class="addfeelings">
                 {{ form.feelings|as_crispy_field }}
             </div>
-            <div class="text-left text-dark">
+            <div class="text-left text-dark ">
                 <textarea id="summernote" name="details"></textarea>
             </div>
         </div>
@@ -30,14 +30,14 @@
         <div class="my-2">
             <button 
                 type="submit"
-                class="btn btn-outline-secondary btn-lg m-2 text-black-50" 
+                class="btn btn-outline-secondary m-2 text-black-50" 
                 href="#" 
                 role="button"
             >
                 Stuffing
             </button>
-
-            <a class="btn btn-outline-secondary btn-lg m-2 text-black-50" href="{% url 'mood' %}">Home</a>
+            <a class="btn btn-outline-secondary m-2 text-black-50" href="{% url 'emobox' user.id %}">EmoBox</a>
+            <a class="btn btn-outline-secondary m-2 text-black-50" href="{% url 'mood' %}">Home</a>
         </div>
 
 
@@ -52,7 +52,7 @@
     <script>
       $('#summernote').summernote({
         tabsize: 2,
-        height: 250,
+        height: 150,
         toolbar: [
           ['style', ['style']],
           ['font', ['bold', 'underline', 'clear']],

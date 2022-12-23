@@ -79,7 +79,7 @@
 
     </head>
     
-    <body>
+    <body class="bg-image">
 
         {% if messages %}
             <div class="message-container fixed-top">
@@ -105,22 +105,18 @@
 
         {% include 'mood/nav.html' %}
 
-        <div>
+        <div class="bg-color row no-gutters">
 
-            <div id="intro" class="text-center bg-image shadow-1-strong">
-                <div class="mask bg-color overlay">
-                    <div class="d-flex justify-content-center align-items-center box">
+            <div class="col d-flex justify-content-center align-items-center">
+                <div class="card">
+                    
+                    {% block content %}
+                    {% endblock %}
 
-                        {% block content %}
-                        {% endblock %}
-
-                    </div>
                 </div>
             </div>
             
         </div>
-
-        <hr class="m-0"/>
 
         {% include 'mood/footer.html' %}
         

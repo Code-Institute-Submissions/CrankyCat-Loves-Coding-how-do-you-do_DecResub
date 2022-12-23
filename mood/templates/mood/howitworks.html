@@ -3,9 +3,7 @@
 {% load static %}
 
 {% block content %}
-<div class="px-4 bg-light bg-gradient text-black-50 p-4">
-
-    <div class="my-4"></div>
+<div class="px-4 bg-light bg-gradient text-black-50 p-4 text-center">
 
     <h4 class="border border-light my-4 ">
         How it works
@@ -41,7 +39,7 @@
             and that's it! Login and start from today!
         </p>
     {% endif %}
-    <div class="my-4"></div>
+    <a class="btn btn-outline-secondary m-2 text-black-50" href="{% url 'account_signup' %}">Register</a>
     
 </div>
 

@@ -24,7 +24,7 @@ def add_emo(request):
             form.save()
             messages.success(
                 request,
-                'Emo added successfully!'
+                'Emo added successfully! '
             )
             return redirect('recordemo')
         else:

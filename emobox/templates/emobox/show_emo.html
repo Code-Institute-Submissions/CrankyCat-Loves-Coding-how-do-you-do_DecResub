@@ -4,33 +4,34 @@
 
 {% block content %}
 
-<div class="card text-center w-75">
+<div class="card">
   
-    <div class="card-header">
+  <div class="card-header text-center">
 
-      <h3 class="font-pc text-muted">
-        On {{emo.date}}, <span class="text-warning">{{ profile.name }}</span> felt
-        <span class="badge badge-info rounded-pill d-inline text-uppercase">
-          {{ emo.feelings }}
-        </span>
-      </h3>
+    <h3 class="font-pc text-muted card-title">
+      On {{emo.date}}, <span class="text-warning">{{ profile.name }}</span> felt
+      <span class="badge badge-info rounded-pill d-inline text-uppercase">
+        {{ emo.feelings }}
+      </span>
+    </h3>
 
-      <p class="text-muted">
-        Created on <strong class="text-info">{{ emo.created_time }}</strong> 
-      </p>
+    <p class="text-muted">
+      Created on <strong class="text-info">{{ emo.created_time }}</strong> 
+    </p>
 
-    </div>
+  </div>
 
-    <div class="card-body">
+  <div class="card-body overflow-auto box">
+    <p class="card-text">{{ emo.details|safe }}</p>
+  </div>
 
-      <p class="card-text">{{ emo.details|safe }}</p>
-    </div>
-    <div class="card-footer text-muted">
-      <a class="btn btn-outline-secondary m-2 text-black-50" href="{% url 'update_emo' emo.id %}">Update Emo</a>
-      <a class="btn btn-outline-secondary m-2 text-black-50 delete" href="{% url 'delete_emo' emo.id %}">Delete Emo</a>
-      <a class="btn btn-outline-secondary m-2 text-black-50" href="{% url 'emobox' user.id %}">EmoBox</a>
-      <a class="btn btn-outline-secondary m-2 text-black-50" href="{% url 'mood' %}">Home</a>
-    </div>
+  <div class="card-footer text-muted text-center">
+    <a class="btn btn-outline-secondary m-2 text-black-50" href="{% url 'update_emo' emo.id %}">Update Emo</a>
+    <a class="btn btn-outline-secondary m-2 text-black-50 delete" href="{% url 'delete_emo' emo.id %}">Delete Emo</a>
+    <a class="btn btn-outline-secondary m-2 text-black-50" href="{% url 'emobox' user.id %}">EmoBox</a>
+    <a class="btn btn-outline-secondary m-2 text-black-50" href="{% url 'mood' %}">Home</a>
+  </div>
+
 </div>
 
 
