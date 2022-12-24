@@ -1,15 +1,6 @@
-# [**How Do You Do**](https://hdyd.herokuapp.com/)
+# [**Moody Box Manual Testing**](https://hdyd.herokuapp.com/)
 
-![Portfolio image](media/home-page.jpg)
-
-## **Overview**
-
-I always wonder how many days do I feel happy and how many days do I feel upset in a month.
-So I have a little notebook to track of my emotions. I found it helps me to better manage my feelings.
-For example, I most likely to try harder to calm myself down if I find myself upset most of the time.
-This is so true that ' Nobody can make you happy until you're happy with yourself FIRST.'
-So~ there is how it work. Be honest with yourself and simply record your emotions by clicking RecordEmo
-and you can track all of your records by clicking EmoBox and that's it! Login and start from today!
+[Back to README](https://github.com/CrankyCat-Loves-Coding/how-do-you-do#3-testing-and-launch)
 
 ## **Table of Contents**
 
