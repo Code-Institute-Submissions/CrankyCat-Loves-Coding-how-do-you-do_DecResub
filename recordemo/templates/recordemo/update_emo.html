@@ -3,14 +3,13 @@
 {% load static %}
 
 {% block content %}
-<div class="px-4 bg-light bg-gradient text-black-50 card">
-
+<div class="bg-light bg-gradient text-black-50 text-center card-body ">
+    
     <div class="row col-12 justify-content-center">
-        <h4 class="border border-light my-4 p-4">
+        <h4 class="border border-light">
             Edit Emo
         </h4>
     </div>
-
 
     <form action="{% url 'update_emo' emo.id %}" method="POST" enctype="multipart/form-data" class="">
         {% csrf_token %}
@@ -27,19 +26,18 @@
             </div>
         </div>
 
-        <div class="my-2">
+        <div class="">
             <button 
                 type="submit"
-                class="btn btn-outline-secondary btn-lg m-2 text-black-50" 
+                class="btn btn-outline-secondary m-2 text-black-50" 
                 href="#" 
                 role="button"
             >
                 Update
             </button>
 
-            <a class="btn btn-outline-secondary btn-lg m-2 text-black-50" href="{% url 'mood' %}">Home</a>
+            <a class="btn btn-outline-secondary m-2 text-black-50" href="{% url 'mood' %}">Home</a>
         </div>
-
 
     </form>
     
@@ -52,7 +50,7 @@
     <script>
       $('#summernote').summernote({
         tabsize: 2,
-        height: 250,
+        maxHeight: 450,
         toolbar: [
           ['style', ['style']],
           ['font', ['bold', 'underline', 'clear']],
