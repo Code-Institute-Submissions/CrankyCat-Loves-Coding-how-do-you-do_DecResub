@@ -7,7 +7,17 @@
 /* Default height for small devices */
 
 .box {
-	height: 400px;
+	height: 350px;
+    width: auto;
+}
+
+.emobox {
+	height: 500px;
+    width: auto;
+}
+
+.showbox {
+	height: 315px;
     width: auto;
 }
 
@@ -72,3 +82,11 @@
 .modal {
     top: auto!important;
 }
+
+/* media responsive*/
+@media (min-width: 576px) { 
+    .showbox {
+        height: 70vh;
+        width: 80vw;
+    }
+ }

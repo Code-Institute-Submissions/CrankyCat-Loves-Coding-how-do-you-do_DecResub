@@ -3,15 +3,17 @@
 
 {% block content %}
 
-<div class="table-responsive text-center card-body box">
+<div class="table-light text-center card-body">
+    <h4>
+        Check Your EmoBox
+    </h4>
+    <a class="btn btn-link btn-rounded text-info" href="{% url 'recordemo' %}" role="button" rel="nofollow">RecordEmo</a>
+    <a class="btn btn-link btn-rounded text-info" href="{% url 'mood' %}">Home</a>
+</div>
 
-    <div class="table-light">
-        <h4>
-            Check Your EmoBox
-        </h4>
-        <a class="btn btn-link btn-rounded text-info" href="{% url 'recordemo' %}" role="button" rel="nofollow">RecordEmo</a>
-        <a class="btn btn-link btn-rounded text-info" href="{% url 'mood' %}">Home</a>
-    </div>
+<div class="table-responsive text-center card-body emobox">
+
+
     
     <table class="table table-hover table-light table-fixed">
 
