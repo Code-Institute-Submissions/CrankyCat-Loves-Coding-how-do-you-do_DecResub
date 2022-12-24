@@ -56,6 +56,7 @@ This is a website allows you to record your emotions and hope that eventually wi
     - As an Authenticated User, I can view all records I have, so that I can go back and review when I wanted.
     - As an Authenticated User, I can edit any records I have., so that I organized it.
     - As an Authenticated User, I can delete any records I like, so that I can control what I like to keep.
+  - [Link to Github issue](https://github.com/CrankyCat-Loves-Coding/how-do-you-do/issues?q=is%3Aissue+is%3Aclosed)
 
 - ## **User View**
 
