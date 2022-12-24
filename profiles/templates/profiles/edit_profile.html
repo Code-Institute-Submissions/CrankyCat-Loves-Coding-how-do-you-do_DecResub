@@ -12,11 +12,11 @@
     >
         {% csrf_token %}
 
-        <h4 class="border border-light my-4">
+        <h4 class="border border-light my-4 editprofilebox">
             Edit display name:
             <span class="text-warning">{{ profile.name }}</span> 
         </h4>
-
+        
         {{ form|crispy }}
 
         <p class="mt-2"></p>

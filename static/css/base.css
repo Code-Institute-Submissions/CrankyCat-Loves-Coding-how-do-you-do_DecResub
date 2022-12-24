@@ -104,4 +104,14 @@
         height: 70vh;
         width: 80vw;
     }
+
+    .profilebox {
+        height: auto;
+        width: 50vw;
+    }
+
+    .editprofilebox {
+        height: auto;
+        width: 50vw;
+    }
  }
