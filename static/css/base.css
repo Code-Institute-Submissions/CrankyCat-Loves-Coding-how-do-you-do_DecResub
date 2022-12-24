@@ -100,4 +100,8 @@
         width: auto;
     }
 
+    .emobox {
+        height: 70vh;
+        width: 80vw;
+    }
  }
