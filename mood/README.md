@@ -127,18 +127,27 @@ This README file is for Moody Box Manual Testing.
 
   - **Responsiveness**
 
-    - **Home/Register/Login/How it Work Page**:
+    - **Home/Register/Login/How it Works Page**:
+
       - All pages responsively displayed from large screen to mobile screen. Responsiveness was tested using Dev Tools to emulate the  device of Iphone SE(375*667). Details can be seen as below image
 
+    - **Home Page**
+
     ![Home page](https://res.cloudinary.com/dimaeig1n/image/upload/v1671922727/home-page.gif)
+
+    - **Register Page**
 
     ![Register page](https://res.cloudinary.com/dimaeig1n/image/upload/v1671924234/sign-up-page.gif)
 
     ![Register page with message](https://res.cloudinary.com/dimaeig1n/image/upload/v1671927345/successful-registered-message-responsive.gif)
 
+    - **Login Page**
+
     ![Login page](https://res.cloudinary.com/dimaeig1n/image/upload/v1671924624/login-page.gif)
 
-    ![How it work page](https://res.cloudinary.com/dimaeig1n/image/upload/v1671925005/how-it-work-page.gif)
+    - **How it works Page**
+
+    ![How it works page](https://res.cloudinary.com/dimaeig1n/image/upload/v1671925005/how-it-work-page.gif)
 
 - **Summary**
 
@@ -161,3 +170,102 @@ This README file is for Moody Box Manual Testing.
   - Details can be found here ![change display name](https://res.cloudinary.com/dimaeig1n/image/upload/v1671931445/change-displayname.gif)
 
   [Back to the top](#overview)
+
+- ### ***RecordEmo page***
+
+  - RecordEmo within the navbar redirected to RecordEmo page correctly.
+
+  - RecordEmo within the home page notification box redirected to RecordEmo page correctly.
+
+  - RecordEmo within the how-it-works page redirected to RecordEmo page correctly.
+
+  - RecordEmo within the EmoBox page redirected to RecordEmo page correctly.
+
+  - An authenticated user is able to select a date to add an emo
+
+  - An authenticated user is able to select Feeling types: happy, excited, calm, disappointed, anxious and angry
+
+  - An authenticated user is able to enter details of their emo. The textfield is implemented via Summernote, it allows users to style texts and add image and much more.
+
+  - Once Stuffing is clicked, a message with green banner "Emo added successfully! " display.
+
+  - Then click the EmoBox redirected the user to the EmoBox page.
+
+  - Details can be found here ![Add emo page](https://res.cloudinary.com/dimaeig1n/image/upload/v1671933437/add-emo.gif)
+
+  [Back to the top](#overview)
+
+- ### ***Emobox page***
+
+  - EmoBox within the navbar redirected to EmoBox page correctly.
+
+  - EmoBox within the home page notification box redirected to EmoBox page correctly.
+
+  - EmoBox within the how-it-works page redirected to EmoBox page correctly.
+
+  - EmoBox within the RecordEmo page redirected to EmoBox page correctly.
+
+  - An authenticated user click details redirected to show-emo page, this page listed all records related to requested user.
+
+  - Details can be found here ![Emobox Page](https://res.cloudinary.com/dimaeig1n/image/upload/v1671935381/emobox.gif)
+
+  [Back to the top](#overview)
+
+- ### ***Update Emo page***
+
+  - Click update within emo detail page redirected user to edit emo page.
+
+  - Within the edit emo page , a message with blue banner "You are editing an emo " displayed accordingly
+
+  - A message with green banner "Emo updated successfully " displayed after click save(update).
+
+  - Details can be found here ![Update Emo Page](https://res.cloudinary.com/dimaeig1n/image/upload/v1671937007/update-emo.gif)
+
+  [Back to the top](#overview)
+
+- ### ***Delete Emo page***
+
+  - A delete confirmation pop up after user clicked delete emo.
+
+  - Click 'cancel' discharge pop up
+
+  - Click 'yes. delete it' delete specify emo
+
+  - A message with green banner "Emo deleted successfully " displayed after click 'yes. delete it' .
+
+  - Details can be found here ![Delete Emo Page](https://res.cloudinary.com/dimaeig1n/image/upload/v1671937835/delete-emo.gif)
+
+  [Back to the top](#overview)
+
+  - **Responsiveness**
+
+    - **Profile/RecordEmo Page**:
+      - All pages responsively displayed from large screen to mobile screen. Responsiveness was tested using Dev Tools to emulate the device of Iphone SE(375*667). Details can be seen as below image
+
+    - **Profile page**
+
+    ![Profile page](https://res.cloudinary.com/dimaeig1n/image/upload/v1671932814/profile-Responsiveness.gif)
+
+    - **RecordEmo page**
+
+    ![RecordEmo page](https://res.cloudinary.com/dimaeig1n/image/upload/v1671934686/add-emo-responsiveness.gif)
+
+    - **Emobox page**
+
+    ![Emobox page](https://res.cloudinary.com/dimaeig1n/image/upload/v1671935687/emo-responsiveness.gif)
+
+    - **Update Emobox page**
+
+    ![Update page](https://res.cloudinary.com/dimaeig1n/image/upload/v1671937235/update-emo-responsiveness.gif)
+
+    - **Delete Emobox page**
+
+    ![Delete page](https://res.cloudinary.com/dimaeig1n/image/upload/v1671937728/delete-emo-responsiveness.gif)
+
+- **Summary**
+
+  - Manual testing for User Story [ Part 2 - An unauthenticated User ] is completed. Data rendered correctly, update and delete function worked as expected. Message and pop up display as designed.
+
+  - Users are now able to login to their personal account, modify or delete any records as well as add an emo after logging in.
+
+[Back to the top](#overview)
