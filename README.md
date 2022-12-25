@@ -113,7 +113,7 @@ This is a website allows you to record your emotions and hope that eventually wi
 
 ## 3. **Testing and Launch**
 
-- Testing are only done through the website.
+- Manual testing details can be found [here](https://github.com/CrankyCat-Loves-Coding/how-do-you-do/blob/main/mood/README.md).
 
 - Errors and Solution
   - ***Error 1***

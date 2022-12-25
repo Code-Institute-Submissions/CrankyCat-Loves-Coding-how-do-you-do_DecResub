@@ -35,7 +35,7 @@ This README file is for Moody Box Manual Testing.
   - As an Authenticated User, I can view all records I have, so that I can go back and review when I want.
 
   - As an Authenticated User, I can edit any records I have., so I organized it.
-  
+
   - As an Authenticated User, I can delete any records I like, so that I can control what I like to keep.
 
   - ***[Link to Github issue](https://github.com/CrankyCat-Loves-Coding/how-do-you-do/issues?q=is%3Aissue+is%3Aclosed)***
@@ -147,3 +147,17 @@ This README file is for Moody Box Manual Testing.
   - Users are now able to navigate through the entire website and there is a page to explain how to use it. Users can register to start adding an emo or login as an authenticated user to review and organize their records.
 
 [Back to the top](#overview)
+
+- ### ***Profile page***
+
+  - Click the user icon within the navbar and redirect users to the profile page.
+
+  - Profile page renders user's display name if there is any, otherwise display None as default.
+
+  - Click the edit button and redirect the user to the edit profile page, at the same time display a message with blue banner reminding the user that they are editing their display name.
+
+  - Once the user clicked update, a message with green banner "Display name has changed to {profile.name} successfully" displayed and display name changed as expected.
+
+  - Details can be found here ![change display name](https://res.cloudinary.com/dimaeig1n/image/upload/v1671931445/change-displayname.gif)
+
+  [Back to the top](#overview)

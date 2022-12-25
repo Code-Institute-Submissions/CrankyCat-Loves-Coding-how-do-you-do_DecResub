@@ -39,7 +39,10 @@ def edit_profile(request, user_id):
             )
     else:
         form = UserProfileForm(instance=profile)
-        messages.info(request, f"You are editing {profile.name}'s name")
+        messages.info(
+            request,
+            f"You are editing {profile.name}'s display name"
+        )
 
     context = {
         
