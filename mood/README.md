@@ -13,6 +13,7 @@ This README file is for Moody Box Manual Testing.
   - [**Table of Contents**](#table-of-contents)
     - [**1. User Story**](#1-user-story)
     - [**2. Manual Testing**](#2-manual-testing)
+    - [**3. Validation**](#3-validation)
 
 ## **1. User Story**
 
@@ -269,3 +270,11 @@ This README file is for Moody Box Manual Testing.
   - Users are now able to login to their personal account, modify or delete any records as well as add an emo after logging in.
 
 [Back to the top](#overview)
+
+## **3. Validation**
+
+- [W3C HTML Validator](https://validator.w3.org/nu/)
+
+  - Document checking completed. No errors or warnings to show.
+  
+    - Details can be found here ![W3C HTML Validator result](https://res.cloudinary.com/dimaeig1n/image/upload/v1672008514/W3C_HTML_Validator.jpg)
