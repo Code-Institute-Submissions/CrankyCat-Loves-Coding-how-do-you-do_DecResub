@@ -4,12 +4,7 @@
 
 ## **Overview**
 
-I always wonder how many days do I feel happy and how many days do I feel upset in a month.
-So I have a little notebook to track of my emotions. I found it helps me to better manage my feelings.
-For example, I most likely to try harder to calm myself down if I find myself upset most of the time.
-This is so true that ' Nobody can make you happy until you're happy with yourself FIRST.'
-So~ there is how it work. Be honest with yourself and simply record your emotions by clicking RecordEmo
-and you can track all of your records by clicking EmoBox and that's it! Login and start from today!
+I always wonder how many days I feel happy and how many days I feel upset in a month.So I have a little notebook to track my emotions. I found it helps me to better manage my feelings. For example, I most likely try harder to calm myself down if I find myself upset most of the time. This is so true that ' Nobody can make you happy until you're happy with yourself FIRST. 'So~ here is how it works. Be honest with yourself and simply record your emotions by clicking RecordEmo and you can track all of your records by clicking EmoBox and that's it! Login and start from today!
 
 ## **Table of Contents**
 
@@ -36,48 +31,78 @@ This is a website allows you to record your emotions and hope that eventually wi
 
   - The target audience for 'Moody Box' are:
     - People who enjoy writing diary
+
     - People who like to record their moments
+
     - People who try to manage their emotions
+  
   - These users will be looking for:
+
     - A website is simple and easy to use
+
     - A private place to write diary
+
     - A full record of their feelings
 
 - ## **User Stories**
 
-  - ***Part 1 – An unauthenticated User***
-    - As an Unauthenticated User, I can use this website sensibly, so that I feel comfortable of using it.
-    - As an Unauthenticated User, I can find a guideline to understand how to use this website, so that I don’t get confused.
-    - As an Unauthenticated User, I can sign up to use the website, so that I can keep my data privately.
-    - As an Unauthenticated User, I can login to my own page, so I can keep track of my history.
-  - ***Part 2 - An authenticated User***
-    - As an Authenticated User, I want my records to be private, so that I feel safe about what I have recorded.
-    - As an Authenticated User, I can record anything I want, so that I can use it as my diary.
-    - As an Authenticated User, I can view all records I have, so that I can go back and review when I wanted.
-    - As an Authenticated User, I can edit any records I have., so that I organized it.
-    - As an Authenticated User, I can delete any records I like, so that I can control what I like to keep.
-  - [Link to Github issue](https://github.com/CrankyCat-Loves-Coding/how-do-you-do/issues?q=is%3Aissue+is%3Aclosed)
+- ***Part 1 – An unauthenticated User***
+
+  - As an Unauthenticated User, I can use this website sensibly, so that I feel comfortable using it.
+
+  - As an Unauthenticated User, I can find a guideline to understand how to use this website, so that I don’t get confused.
+
+  - As an Unauthenticated User, I can sign up to use the website, so that I can keep my data privately.
+
+  - As an Unauthenticated User, I can login to my own page, so I can keep track of my history.
+
+- ***Part 2 - An authenticated User***
+
+  - As an Authenticated User, I want my records to be private, so that I feel safe about what I have recorded.
+
+  - As an Authenticated User, I can record anything I want, so that I can use it as my diary.
+
+  - As an Authenticated User, I can view all records I have, so that I can go back and review when I want.
+
+  - As an Authenticated User, I can edit any records I have., so I organized it.
+  
+  - As an Authenticated User, I can delete any records I like, so that I can control what I like to keep.
+
+- ***[Link to Github issue](https://github.com/CrankyCat-Loves-Coding/how-do-you-do/issues?q=is%3Aissue+is%3Aclosed)***
+
 
 - ## **User View**
 
-  - This is fairly simple. A home and a logo link will take User back to index. An unauthenticated User has a chance to register or login the website. An authenticated User will be able to add emotions and review records.
-  - At the How it work page, A User will be explained how this website is going to work.
+  - This is fairly simple. A home and a logo link will take the User back to the index. An unauthenticated User has a chance to register or login the website. An authenticated User will be able to add emotions and review records.
+
+  - At the How it works page, A User will explain how this website is going to work.
+
   - At the RecordEmo page, A User is able to select a date, a feeling and input some contents for record purpose.
-  - At the EmoBox page, A User is able to review all individual's emo, User is able to delete any emo on this page. However, deleting emo is not recommand. So once delete botton is clicked. All records will be cleared.
-  - At the Profile page (on the top right), A User is able to give themselve a display name.
+
+  - At the EmoBox page, A User is able to review all individual's emo, User is able to delete any emo on this page. However, deleting emo is not recommended. So once the delete button is clicked. All records will be cleared.
+
+  - At the Profile page (on the top right), A User is able to give himself a display name.
 
 - ## **Coder View**
 
-  - RecordEmo page is built base on CRUD - Create, Update and Delete method.
-  - EmoBox page and is built base on CRUD - Read and Delete method.
-  - Profile page and is built base on CRUD - Read and Update method.
-  - Only an authenticated User is able to create, modify and delete data belong to themselve.
+  - RecordEmo page is built based on CRUD - Create, Update and Delete method.
+
+  - EmoBox page and is built based on CRUD - Read and Delete method.
+
+  - Profile page and is built based on CRUD - Read and Update method.
+
+  - Only an authenticated User is able to create, modify and delete data belonging to themselves.
+
   - Heroku was used for deployment.
-  - AWS S3 was used for sotring CSS and media.
+
+  - AWS S3 was used for storing CSS and media.
+
   - DMB was used for styling.
+
   - Email verification with Google.
 
 - ## **Design**
+
   - [Wireframes can be viewed here](https://github.com/CrankyCat-Loves-Coding/how-do-you-do/blob/main/media/doc/moody-box-wireframe.pdf)
   - Selected colors that represent peace and calm to build the website.
   ![color image](media/doc/color.jpg)
