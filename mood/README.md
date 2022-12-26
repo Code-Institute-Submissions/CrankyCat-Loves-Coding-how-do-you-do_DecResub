@@ -292,3 +292,13 @@ This README file is for Moody Box Manual Testing.
 - [CI Python Linter](https://pep8ci.herokuapp.com/)
 
   - No issue found.
+
+- [Lighthouse](https://github.com/GoogleChrome/lighthouse/blob/HEAD/docs/user-flows.md)
+
+  - Device: Desktop
+
+    - ![Lighthouse desktop](https://res.cloudinary.com/dimaeig1n/image/upload/v1672014761/lighthouse-desktop.jpg)
+  
+  - Device: Mobile
+
+    - ![Lighthouse Mobile](https://res.cloudinary.com/dimaeig1n/image/upload/v1672014761/lighthouse-mobile.jpg)
