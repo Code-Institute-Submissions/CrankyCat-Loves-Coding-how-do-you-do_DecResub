@@ -15,6 +15,7 @@ This README file is for Moody Box Manual Testing.
     - [**2. Manual Testing**](#2-manual-testing)
     - [**3. Validation**](#3-validation)
     - [**4. Error and Solution**](#4-error-and-solution)
+    - [**5. Improvement**](#5-improvement)
 
 ## **1. User Story**
 
@@ -378,4 +379,18 @@ This README file is for Moody Box Manual Testing.
 
     - ```python3 manage.py loaddata categories```, ```python3 manage.py loaddata products``` to load data back
   
+  [Back to the top](#overview)
+
+## **5. Improvement**
+
+- ### ***Improvement for RecordEmo page***
+
+  - Previously, after a user added an emo, a green banner with a successful added message will display and the user will stay at the RecordEmo page.
+
+  - with the improvement, after a user added an emo, a green banner with a successful added message will display, but the user is redirecting to their EmoBox page.
+
+  - Details can be found here
+  
+    ![Redirect to emobox](https://res.cloudinary.com/dimaeig1n/image/upload/v1672092492/add-emo-improvement.gif)
+
   [Back to the top](#overview)
