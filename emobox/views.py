@@ -18,7 +18,7 @@ def emo_box(request, id):
     profile = get_object_or_404(UserProfile, user=request.user)
 
     # then filter all feelings belong to this user
-    feelings = profile.user_feelings.all()
+    feelings = profile.user_feelings.all().order_by('-date')
 
     context = {
         'feelings': feelings,
