@@ -26,7 +26,7 @@ def add_emo(request):
                 request,
                 'Emo added successfully! '
             )
-            return redirect('recordemo')
+            return redirect(reverse('emobox', args=[profile.id]))
         else:
             messages.error(
                 request,

@@ -161,6 +161,8 @@ This is a website allows you to record your emotions and hope that eventually wi
 
 - [Django Blog cheatsheat](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf)
 
+- [Heroku](http://heroku.com)
+
 - The live link can be found here [link]( https://hdyd.herokuapp.com/)
 
 [Back to the top](#overview)
