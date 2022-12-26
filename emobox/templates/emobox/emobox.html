@@ -30,7 +30,7 @@
             {% if feelings %}
                 {% for feeling in feelings %}
                 <tr>
-                    <td>{{ profile.name|truncatechars:6 }}</td>
+                    <td>{{ profile.name|truncatechars:15 }}</td>
                     <td>{{ feeling.date }}</td>
                     <td>{{ feeling.created_time }}</td>
                     <td>
