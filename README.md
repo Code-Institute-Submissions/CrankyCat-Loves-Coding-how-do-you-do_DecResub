@@ -70,7 +70,6 @@ This is a website allows you to record your emotions and hope that eventually wi
 
 - ***[Link to Github issue](https://github.com/CrankyCat-Loves-Coding/how-do-you-do/issues?q=is%3Aissue+is%3Aclosed)***
 
-
 - ## **User View**
 
   - This is fairly simple. A home and a logo link will take the User back to the index. An unauthenticated User has a chance to register or login the website. An authenticated User will be able to add emotions and review records.
@@ -141,7 +140,7 @@ This is a website allows you to record your emotions and hope that eventually wi
     - ***Solution***:
       - basicly to solved this error is to completely remove your Django migrations and reset your database.
       - before doing that it is better to save database by using ```python3 manage.py dumpdata products.product > products_dump.json```,```python3 manage.py dumpdata products.category > categories_dump.json```. this can be skip if fixture is in place. This is how we got them.products is the app name, product is the model, products_dump.json is the name of the file we put the data in
-      - Remove the all migrations files within your project. Go through each of your project apps' migration folders and remove everything inside, except the __init__.py file.
+      - Remove the all migrations files within your project. Go through each of your project apps' migration folders and remove everything inside, except the init.py file.
       - Drop the database. If you're using Heroku Postgres, the command for this is: ```heroku pg:reset DATABASE_URL```, need to login to Heroku ```Heroku login -i``` before doing that
       - Run the commands ```python3 manage.py makemigrations``` and ```python3 manage.py migrate``` to remake migrations and setup the new database
       - ```python3 manage.py loaddata categories```, ```python3 manage.py loaddata products``` to load data back

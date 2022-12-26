@@ -273,8 +273,22 @@ This README file is for Moody Box Manual Testing.
 
 ## **3. Validation**
 
-- [W3C HTML Validator](https://validator.w3.org/nu/)
+- [W3C HTML Validator](https://validator.w3.org/#validate_by_uri)
+
+  - Document checking completed. No errors or warnings to show.
+
+    - Details can be found here ![W3C HTML Validator result](https://res.cloudinary.com/dimaeig1n/image/upload/v1672008514/W3C_HTML_Validator.jpg)
+
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator.html.en#validate_by_uri)
 
   - Document checking completed. No errors or warnings to show.
   
-    - Details can be found here ![W3C HTML Validator result](https://res.cloudinary.com/dimaeig1n/image/upload/v1672008514/W3C_HTML_Validator.jpg)
+    - Details can be found here ![W3C CSS Validator result](https://res.cloudinary.com/dimaeig1n/image/upload/c_scale,w_800/v1672012260/W3C_CSS_Validator.jpg)
+
+- [JSHint](https://beautifytools.com/javascript-validator.php)
+
+  - No issue found.
+
+- [CI Python Linter](https://pep8ci.herokuapp.com/)
+
+  - No issue found.

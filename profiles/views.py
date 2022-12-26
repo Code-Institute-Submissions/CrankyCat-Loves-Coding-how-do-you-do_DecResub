@@ -23,13 +23,13 @@ def profile(request):
 def edit_profile(request, user_id):
 
     profile = get_object_or_404(UserProfile, user=user_id)
-    
+
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
             messages.success(
-                request, 
+                request,
                 f'Display name has changed to {profile.name} successfully'
             )
         else:
@@ -45,7 +45,6 @@ def edit_profile(request, user_id):
         )
 
     context = {
-        
         'profile': profile,
         'form': form,
     }
