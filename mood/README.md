@@ -169,7 +169,9 @@ This README file is for Moody Box Manual Testing.
 
   - Once the user clicked update, a message with green banner "Display name has changed to {profile.name} successfully" displayed and display name changed as expected.
 
-  - Details can be found here ![change display name](https://res.cloudinary.com/dimaeig1n/image/upload/v1671931445/change-displayname.gif)
+  - Details can be found here
+  
+    ![change display name](https://res.cloudinary.com/dimaeig1n/image/upload/v1671931445/change-displayname.gif)
 
   [Back to the top](#overview)
 
@@ -193,7 +195,9 @@ This README file is for Moody Box Manual Testing.
 
   - Then click the EmoBox redirected the user to the EmoBox page.
 
-  - Details can be found here ![Add emo page](https://res.cloudinary.com/dimaeig1n/image/upload/v1671933437/add-emo.gif)
+  - Details can be found here
+  
+    ![Add emo page](https://res.cloudinary.com/dimaeig1n/image/upload/v1671933437/add-emo.gif)
 
   [Back to the top](#overview)
 
@@ -209,7 +213,9 @@ This README file is for Moody Box Manual Testing.
 
   - An authenticated user click details redirected to show-emo page, this page listed all records related to requested user.
 
-  - Details can be found here ![Emobox Page](https://res.cloudinary.com/dimaeig1n/image/upload/v1671935381/emobox.gif)
+  - Details can be found here
+  
+    ![Emobox Page](https://res.cloudinary.com/dimaeig1n/image/upload/v1671935381/emobox.gif)
 
   [Back to the top](#overview)
 
@@ -221,7 +227,9 @@ This README file is for Moody Box Manual Testing.
 
   - A message with green banner "Emo updated successfully " displayed after click save(update).
 
-  - Details can be found here ![Update Emo Page](https://res.cloudinary.com/dimaeig1n/image/upload/v1671937007/update-emo.gif)
+  - Details can be found here
+  
+    ![Update Emo Page](https://res.cloudinary.com/dimaeig1n/image/upload/v1671937007/update-emo.gif)
 
   [Back to the top](#overview)
 
@@ -235,7 +243,9 @@ This README file is for Moody Box Manual Testing.
 
   - A message with green banner "Emo deleted successfully " displayed after click 'yes. delete it' .
 
-  - Details can be found here ![Delete Emo Page](https://res.cloudinary.com/dimaeig1n/image/upload/v1671937835/delete-emo.gif)
+  - Details can be found here
+  
+    ![Delete Emo Page](https://res.cloudinary.com/dimaeig1n/image/upload/v1671937835/delete-emo.gif)
 
   [Back to the top](#overview)
 

@@ -73,19 +73,19 @@ This is a website allows you to record your emotions and hope that eventually wi
 
 - ## **User View**
 
-  - This is fairly simple. A home and a logo link will take a User back to the index page. An unauthenticated User has a chance to register or login the website. An authenticated User will be able to add emotions and review records.
+  - This is fairly simple. A home and a logo link will take a User back to the index page. An unauthenticated User has a chance to register or login to the website. An authenticated User will be able to add emotions and review records.
 
     ![Moody Box sign up page](https://res.cloudinary.com/dimaeig1n/image/upload/v1672087607/MD-sign-up-page.jpg)
 
-  - At the How it works page, A User will explain how this website is going to work.
+  - At the How it works page, A User is explained how this website works.
 
     ![Moody Box how it works page](https://res.cloudinary.com/dimaeig1n/image/upload/v1672087823/MD-how-it-works-page.jpg)
 
-  - At the RecordEmo page, A User is able to select a date, a feeling and input some contents for record purpose.
+  - At the RecordEmo page, A User is able to select a date, a feeling and input some contents for recording purpose.
 
     ![Moody Box add emo page](https://res.cloudinary.com/dimaeig1n/image/upload/v1672087971/MD-add-emo.jpg)
 
-  - At the EmoBox page, A User is able to review all individual's emo. Clicking details to modify or delete any emo.
+  - At the EmoBox page, A User is able to review all individual's emo. Clicking details link a page to modify or delete any emo.
 
     ![Moody Box emobox page](https://res.cloudinary.com/dimaeig1n/image/upload/v1671935381/emobox.gif)
 
@@ -107,7 +107,7 @@ This is a website allows you to record your emotions and hope that eventually wi
 
   - AWS S3 was used for storing CSS and media.
 
-  - DMB was used for styling.
+  - Bootstrap was used for styling.
 
   - Email verification with Google.
 
@@ -158,6 +158,8 @@ This is a website allows you to record your emotions and hope that eventually wi
 - [Deployment details can be viewed here](https://github.com/CrankyCat-Loves-Coding/how-do-you-do/blob/main/media/doc/Moody-Box-Deployment.pdf)
 
 - [Code Institute Python Essentials Template](https://github.com/Code-Institute-Org/python-essentials-template)
+
+- [Django Blog cheatsheat](https://codeinstitute.s3.amazonaws.com/fst/Django%20Blog%20Cheat%20Sheet%20v1.pdf)
 
 - The live link can be found here [link]( https://hdyd.herokuapp.com/)
 
