@@ -11,7 +11,6 @@ class UserProfile(models.Model):
     name = models.CharField(max_length=50, null=True, blank=False)
 
 
-
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
     """

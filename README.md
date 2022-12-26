@@ -1,4 +1,4 @@
-# [**How Do You Do**](https://hdyd.herokuapp.com/)
+# [**Moody Box**](https://hdyd.herokuapp.com/)
 
 ![Portfolio image](media/home-page.jpg)
 
@@ -8,12 +8,12 @@ I always wonder how many days I feel happy and how many days I feel upset in a m
 
 ## **Table of Contents**
 
-- [**CNEbroidery**](#overview)
+- [**Moody Box**](#overview)
   - [**Overview**](#overview)
   - [**Table of Contents**](#table-of-contents)
     - [**1. What Is It?**](#1-what-is-it)
     - [**2. How to Achieve?**](#2-how-to-achieve)
-    - [**3. Testing and Launch**](#3-testing-and-launch)
+    - [**3. Testing**](#3-testing)
     - [**4. Deployment**](#4-deployment)
     - [**5. Support**](#5-support)
     - [**6. Reference and Research**](#6-reference-and-research)
@@ -30,6 +30,7 @@ This is a website allows you to record your emotions and hope that eventually wi
 - ## **Strategy**
 
   - The target audience for 'Moody Box' are:
+
     - People who enjoy writing diary
 
     - People who like to record their moments
@@ -103,47 +104,27 @@ This is a website allows you to record your emotions and hope that eventually wi
 - ## **Design**
 
   - [Wireframes can be viewed here](https://github.com/CrankyCat-Loves-Coding/how-do-you-do/blob/main/media/doc/moody-box-wireframe.pdf)
+
+  - Flowchart and Shema
+    - UserProfile model assign an unique database to a user.
+
+    - AddFeeling model link to the user profile to collect data accordingly, as well as to modify and delete assigned data.
+
+   ![Flowchart and Shema](https://res.cloudinary.com/dimaeig1n/image/upload/v1672024677/moody-box-flowchart-schema.jpg)
+
   - Selected colors that represent peace and calm to build the website.
+
   ![color image](media/doc/color.jpg)
+
   - Selected Google Font Righteous
+
   ![font](media/doc/font-righteous.jpg)
 
 [Back to the top](#overview)
 
-## 3. **Testing and Launch**
+## 3. **Testing**
 
 - Manual testing details can be found [here](https://github.com/CrankyCat-Loves-Coding/how-do-you-do/blob/main/mood/README.md).
-
-- Errors and Solution
-  - ***Error 1***
-    - ***Error message***: ERROR: Could not build wheels for backports.zoneinfo, which is required to install pyproject.toml-based projects
-    - ***Solution***:
-      - ```Heroku login -i``` (login to Heroku)
-      - ```heroku stack:set heroku-20 -a <app name>```
-      - runtime.txt (root directory, with the content of: python-3.8.14)
-      - save, commit, push, deploy to heroku
-      - [Article](https://devcenter.heroku.com/articles/heroku-20-stack)
-  
-  - ***Error 2***
-    - ***Error message***: TypeError: expected str, bytes or os.PathLike object, not tuple
-    - ***Solution***: ```MEDIA_ROOT = os.path.join(BASE_DIR, 'media')```, media_root was incorrectly set
-
-  - ***Error 3***
-    - ***Error message***: Class Product has no objects member
-    - ***Solution***:
-      - Fixed by adding ```objects = models.Manager()``` to Product.
-      - That's not an error, it's just a warning from VSC. Django adds that property dynamically to all model classes (it uses a lot of magic under the hood), so the IDE doesn't know about it by looking at the class declaration, so it warns you about a possible error (it's not). objects is in fact a Manager instance that helps with querying the DB. If you really want to get rid of that warning you could go to all your models and add objects = models.Manager() Now, VSC will see the objects declared and will not complain about it again.
-      - [Article](https://stackoverflow.com/questions/45135263/class-has-no-objects-member )
-
-  - ***Error 4***
-    - ***Error message***: django.db.migrations.exceptions.NodeNotFoundError: Migration checkout.0005_order_coupon dependencies reference nonexistent parent node ('coupons', '0003_alter_coupon_coupon_code_alter_coupon_discount_price')
-    - ***Solution***:
-      - basicly to solved this error is to completely remove your Django migrations and reset your database.
-      - before doing that it is better to save database by using ```python3 manage.py dumpdata products.product > products_dump.json```,```python3 manage.py dumpdata products.category > categories_dump.json```. this can be skip if fixture is in place. This is how we got them.products is the app name, product is the model, products_dump.json is the name of the file we put the data in
-      - Remove the all migrations files within your project. Go through each of your project apps' migration folders and remove everything inside, except the init.py file.
-      - Drop the database. If you're using Heroku Postgres, the command for this is: ```heroku pg:reset DATABASE_URL```, need to login to Heroku ```Heroku login -i``` before doing that
-      - Run the commands ```python3 manage.py makemigrations``` and ```python3 manage.py migrate``` to remake migrations and setup the new database
-      - ```python3 manage.py loaddata categories```, ```python3 manage.py loaddata products``` to load data back
 
 - Technology Stack
   There is a list of tools or method had been used during the period of development:
@@ -151,29 +132,22 @@ This is a website allows you to record your emotions and hope that eventually wi
   *Building methods*
   - [x] [Django-allauth](https://django-allauth.readthedocs.io/en/latest/installation.html)
   - [x] [Django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/)
-  - [x] [Django-countries](https://pypi.org/project/django-countries/)
   - [x] [AWS](https://aws.amazon.com/)
-  - [x] [DMB](https://mdbootstrap.com/docs/standard/getting-started/installation/)
+  - [x] [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
   - [x] [Heroku]( https://dashboard.heroku.com/apps)
   - [x] [pixabay - background image](https://pixabay.com/users/saydung89-18713596/?tab=most-relevant&pagi=3)
   - [x] [balsamiq](https://balsamiq.com/)
   - [x] [colormind](http://colormind.io/)
+  - [x] [ezgif](http://ezgif.com/)
+  - [x] [cloudinary](https://cloudinary.com/)
 
 [Back to the top](#overview)
 
 ## 4. **Deployment**
 
-- The site was deployed to [How do you do(Moody Box)]( https://hdyd.herokuapp.com/) page. The steps to deploy are as follows:
+- [Deployment details can be viewed here](https://github.com/CrankyCat-Loves-Coding/how-do-you-do/blob/main/media/doc/Moody-Box-Deployment.pdf)
 
-- In the Heroku page, select ‘Create new app’
-
-- Create app name and choose a region
-
-- Navigate to the setting tab. Add Python and node.js buildpacks
-
-- At the deploy section, connect to Github, search and link to HDYD repository.
-
-- Scroll down to set up automatic deploys, it enables Heroku to rebuild the app every time push code to Github.
+- [Code Institute Python Essentials Template](https://github.com/Code-Institute-Org/python-essentials-template)
 
 - The live link can be found here [link]( https://hdyd.herokuapp.com/)
 
@@ -183,12 +157,16 @@ This is a website allows you to record your emotions and hope that eventually wi
 
 - Code Institute Tutor Assistance
 - [Coder 凯歌响起](https://blog.csdn.net/a13554371686?type=ask)
+- [Harry Dhillon](https://www.linkedin.com/in/harry-dhillon-299b321b3/)
 
 [Back to the top](#overview)
 
 ## 6. **Reference and Research**
 
 - Reference
-  - [x] [BugBytes](https://www.youtube.com/watch?v=MZwKoi0wu2Q&list=PL-2EBeDYMIbQSGbpvB59DJbf4Ox7hXPSU&ab_channel=BugBytes)
+  - [BugBytes](https://www.youtube.com/watch?v=MZwKoi0wu2Q&list=PL-2EBeDYMIbQSGbpvB59DJbf4Ox7hXPSU&ab_channel=BugBytes)
+  - [jobin](https://github.com/williamtyn/jobin)
+  - [heiwa-gallery](https://github.com/daisygunn/heiwa-gallery)
+  - [boutique_ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1)
 
 [Back to the top](#overview)

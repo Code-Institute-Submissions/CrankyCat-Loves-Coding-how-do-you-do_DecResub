@@ -14,6 +14,7 @@ This README file is for Moody Box Manual Testing.
     - [**1. User Story**](#1-user-story)
     - [**2. Manual Testing**](#2-manual-testing)
     - [**3. Validation**](#3-validation)
+    - [**4. Error and Solution**](#4-error-and-solution)
 
 ## **1. User Story**
 
@@ -302,3 +303,69 @@ This README file is for Moody Box Manual Testing.
   - Device: Mobile
 
     - ![Lighthouse Mobile](https://res.cloudinary.com/dimaeig1n/image/upload/v1672014761/lighthouse-mobile.jpg)
+
+[Back to the top](#overview)
+
+## **4. Error and Solution**
+
+- ***Error 1***
+
+  - ***Error message***:
+  
+    ERROR: Could not build wheels for backports.zoneinfo, which is required to install pyproject.toml-based projects
+
+  - ***Solution***:
+
+    - ```Heroku login -i``` (login to Heroku)
+
+    - ```heroku stack:set heroku-20 -a <app name>```
+
+    - runtime.txt (root directory, with the content of: python-3.8.14)
+
+    - save, commit, push, deploy to heroku
+
+    - [Article](https://devcenter.heroku.com/articles/heroku-20-stack)
+
+- ***Error 2***
+
+  - ***Error message***:
+
+    TypeError: expected str, bytes or os.PathLike object, not tuple
+
+  - ***Solution***:
+
+    ```MEDIA_ROOT = os.path.join(BASE_DIR, 'media')```, media_root was incorrectly set
+
+- ***Error 3***
+
+  - ***Error message***:
+
+    Class Product has no objects member
+
+  - ***Solution***:
+
+    - Fixed by adding ```objects = models.Manager()``` to Product.
+
+    - That's not an error, it's just a warning from VSC. Django adds that property dynamically to all model classes (it uses a lot of magic under the hood), so the IDE doesn't know about it by looking at the class declaration, so it warns you about a possible error (it's not). objects is in fact a Manager instance that helps with querying the DB. If you really want to get rid of that warning you could go to all your models and add objects = models.Manager() Now, VSC will see the objects declared and will not complain about it again.
+
+    - [Article](https://stackoverflow.com/questions/45135263/class-has-no-objects-member )
+
+- ***Error 4***
+
+  - ***Error message***: django.db.migrations.exceptions.NodeNotFoundError: Migration checkout.0005_order_coupon dependencies reference nonexistent parent node ('coupons', '0003_alter_coupon_coupon_code_alter_coupon_discount_price')
+
+  - ***Solution***:
+
+    - basicly to solved this error is to completely remove your Django migrations and reset your database.
+
+    - before doing that it is better to save database by using ```python3 manage.py dumpdata products.product > products_dump.json```,```python3 manage.py dumpdata products.category > categories_dump.json```. this can be skip if fixture is in place. This is how we got them.products is the app name, product is the model, products_dump.json is the name of the file we put the data in
+
+    - Remove the all migrations files within your project. Go through each of your project apps' migration folders and remove everything inside, except the init.py file.
+
+    - Drop the database. If you're using Heroku Postgres, the command for this is: ```heroku pg:reset DATABASE_URL```, need to login to Heroku ```Heroku login -i``` before doing that
+
+    - Run the commands ```python3 manage.py makemigrations``` and ```python3 manage.py migrate``` to remake migrations and setup the new database
+
+    - ```python3 manage.py loaddata categories```, ```python3 manage.py loaddata products``` to load data back
+  
+  [Back to the top](#overview)
